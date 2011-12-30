@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>SampleApp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+ <html>
+   <head>
+     <title>Sample App | <%= @title %></title>
+     <%= csrf_meta_tag %>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
+ 
