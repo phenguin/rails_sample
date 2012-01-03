@@ -4,17 +4,25 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddEmailUniquenessIndex	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^class AddEmailUniquenessIndex < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SampleApp
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateUsers	db/migrate/20120103175402_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:CreateUsers
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
+down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
 help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesController
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
+index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
 title	app/helpers/application_helper.rb	/^  def title$/;"	f	class:ApplicationHelper
+up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	class:AddEmailUniquenessIndex
