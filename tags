@@ -5,6 +5,8 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 AddEmailUniquenessIndex	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^class AddEmailUniquenessIndex < ActiveRecord::Migration$/;"	c
+AddPasswordToUsers	db/migrate/20120103203914_add_password_to_users.rb	/^class AddPasswordToUsers < ActiveRecord::Migration$/;"	c
+AddSaltToUsers	db/migrate/20120103210849_add_salt_to_users.rb	/^class AddSaltToUsers < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SampleApp
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
@@ -16,13 +18,21 @@ User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
 change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20120103203914_add_password_to_users.rb	/^  def change$/;"	f	class:AddPasswordToUsers
+change	db/migrate/20120103210849_add_salt_to_users.rb	/^  def change$/;"	f	class:AddSaltToUsers
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
 down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
+encrypt	app/models/user.rb	/^  def encrypt(string)$/;"	f	class:User
+encrypt_password	app/models/user.rb	/^  def encrypt_password$/;"	f	class:User
+has_password?	app/models/user.rb	/^  def has_password?(submitted)$/;"	f	class:User
 help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesController
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
 index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+make_salt	app/models/user.rb	/^  def make_salt$/;"	f	class:User
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+secure_hash	app/models/user.rb	/^  def secure_hash(string)$/;"	f	class:User
 show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
 title	app/helpers/application_helper.rb	/^  def title$/;"	f	class:ApplicationHelper
 up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	class:AddEmailUniquenessIndex
