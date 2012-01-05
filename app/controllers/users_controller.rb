@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      render "show?id=#{@user.id}"
+      redirect_to user_path(@user)
     else
       @title = "Sign up"
       @errors = @user.errors.full_messages

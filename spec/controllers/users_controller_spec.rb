@@ -77,6 +77,29 @@ describe UsersController do
 
     end
 
+    describe 'success' do
+
+      before(:each) do
+        @attr = { :name => 'Valid User', :email => 'validemail@example.com',
+          :password => 'secrets', :password_confirmation => 'secrets' }
+      end
+
+      it 'should display a welcome message' do
+        flash[:success].should =~ /welcome to the sample app/i
+      end
+      it 'should create a new user' do
+        lambda do
+          post :create, :user => @attr
+        end.should change(User, :count).by(1)
+      end
+
+      it 'should redirect to the user show page' do
+        post :create, :user => @attr
+        response.should redirect_to(user_path(assigns(:user)))
+      end
+
+    end
+
   end
 
 end
