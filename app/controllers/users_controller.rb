@@ -7,11 +7,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      render "users/#{@user.id}"
+      render "show?id=#{@user.id}"
     else
       @title = "Sign up"
       @errors = @user.errors.full_messages
-      @user = User.new
       render 'new'
     end
   end
@@ -24,6 +23,5 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title = "#{@user.name}'s Profile"
   end
-
 
 end

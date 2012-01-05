@@ -1,11 +1,5 @@
  <h1>Sign up!</h1>
- <% unless @errors.nil? %>
-    <ul>
-      <% @errors.each do |err_msg| %>
-         <li><%= err_msg %></li>
-      <% end %>
-   </ul>
- <% end %>
+ <%= render 'shared/error_messages' %>
  <%= form_for(@user) do |f| %>
 
     <div class="field">
