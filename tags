@@ -14,6 +14,8 @@ CreateUsers	db/migrate/20120103175402_create_users.rb	/^class CreateUsers < Acti
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
@@ -23,14 +25,19 @@ change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:Crea
 change	db/migrate/20120103203914_add_password_to_users.rb	/^  def change$/;"	f	class:AddPasswordToUsers
 change	db/migrate/20120103210849_add_salt_to_users.rb	/^  def change$/;"	f	class:AddSaltToUsers
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
 down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
 encrypt	app/models/user.rb	/^  def encrypt(string)$/;"	f	class:User
 encrypt_password	app/models/user.rb	/^  def encrypt_password$/;"	f	class:User
+gravatar_for	app/helpers/application_helper.rb	/^  def gravatar_for(user, options = { :size => 50 })$/;"	f	class:ApplicationHelper
 has_password?	app/models/user.rb	/^  def has_password?(submitted)$/;"	f	class:User
 help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesController
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
 index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
 make_salt	app/models/user.rb	/^  def make_salt$/;"	f	class:User
+new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 secure_hash	app/models/user.rb	/^  def secure_hash(string)$/;"	f	class:User
 show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
