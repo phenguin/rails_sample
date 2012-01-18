@@ -100,6 +100,11 @@ describe UsersController do
         response.should redirect_to(user_path(assigns(:user)))
       end
 
+      it 'should automatically sign the user in' do
+        post :create, :user => @attr
+        controller.should be_signed_in
+      end
+
     end
 
   end
