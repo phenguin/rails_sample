@@ -212,7 +212,7 @@ describe UsersController do
         wrong_user = Factory(:user, :email => "user@wrong.com")
         test_sign_in(wrong_user)
       end
-      
+
       it "should require matchings users for 'edit'" do
         get :edit, :id => @user
         response.should redirect_to(root_path)
@@ -240,8 +240,11 @@ describe UsersController do
         test_sign_in(@user)
         second = Factory(:user, :name => "Bob", :email => "another@example.com")
         third = Factory(:user, :name => "Ben", :email => "another@example.net")
-
         @users = [@user, second, third]
+        30.times do
+          @users << Factory(:user, :name => Factory.next(:name),
+                           :email => Factory.next(:email))
+        end
       end
 
       it "should be successful" do
@@ -256,9 +259,15 @@ describe UsersController do
 
       it "should have an element for each user" do
         get :index
-        @users.each do |user|
+        @users[0..2].each do |user|
           response.should have_selector("li", :content => user.name)
         end
+      end
+
+      it "should paginate users" do
+        get :index
+        response.should have_selector("div.pagination")
+        response.should have_selector("span.disabled", :content => "Previous")
       end
 
     end
