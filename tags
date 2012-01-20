@@ -20,15 +20,24 @@ User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+authenticate	app/controllers/users_controller.rb	/^  def authenticate$/;"	f	class:UsersController
 authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
+authenticate_with_salt	app/models/user.rb	/^  def self.authenticate_with_salt(id, cookie_salt)$/;"	F	class:User
 change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:CreateUsers
 change	db/migrate/20120103203914_add_password_to_users.rb	/^  def change$/;"	f	class:AddPasswordToUsers
 change	db/migrate/20120103210849_add_salt_to_users.rb	/^  def change$/;"	f	class:AddSaltToUsers
+clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	class:SessionsHelper
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
+correct_user	app/controllers/users_controller.rb	/^  def correct_user$/;"	f	class:UsersController
 create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
 create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
+current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
+current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
+deny_access	app/helpers/sessions_helper.rb	/^  def deny_access$/;"	f	class:SessionsHelper
 destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
 down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
 encrypt	app/models/user.rb	/^  def encrypt(string)$/;"	f	class:User
 encrypt_password	app/models/user.rb	/^  def encrypt_password$/;"	f	class:User
 gravatar_for	app/helpers/application_helper.rb	/^  def gravatar_for(user, options = { :size => 50 })$/;"	f	class:ApplicationHelper
@@ -39,7 +48,16 @@ index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersControl
 make_salt	app/models/user.rb	/^  def make_salt$/;"	f	class:User
 new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
+remember_token	app/helpers/sessions_helper.rb	/^  def remember_token$/;"	f	class:SessionsHelper
 secure_hash	app/models/user.rb	/^  def secure_hash(string)$/;"	f	class:User
 show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+sign_in	app/helpers/sessions_helper.rb	/^  def sign_in(user)$/;"	f	class:SessionsHelper
+sign_out	app/helpers/sessions_helper.rb	/^  def sign_out$/;"	f	class:SessionsHelper
+signed_in?	app/helpers/sessions_helper.rb	/^  def signed_in?$/;"	f	class:SessionsHelper
+store_location	app/helpers/sessions_helper.rb	/^  def store_location$/;"	f	class:SessionsHelper
+test_sign_in	spec/spec_helper.rb	/^  def test_sign_in(user)$/;"	f
 title	app/helpers/application_helper.rb	/^  def title$/;"	f	class:ApplicationHelper
 up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	class:AddEmailUniquenessIndex
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+user_from_remember_token	app/helpers/sessions_helper.rb	/^  def user_from_remember_token$/;"	f	class:SessionsHelper

@@ -12,6 +12,7 @@ gem 'json'
 
 group :development do
   gem 'rspec-rails'
+  gem 'faker', '0.3.1'
 end
 
 group :test do
