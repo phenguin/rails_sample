@@ -1,0 +1,33 @@
+Milestone 2 - Dynamic Database-backed Functionality
+
+
+Justin Cullen
+Stephen Rigsby
+Andy Kalendarian
+
+
+===================================================
+
+1)
+2) page that lists all the users that have registered for and account and links to their page
+3) ....
+4) Ruby on Rails //
+5) jQuery (although there isn't much front end yet)
+6) Firefox/Chrome
+7) Other than site skeleton we have a sign-in ability// associated pages.
+8) Still have to work on allowing for the creation and joining of groups//projects. After achieving that we need to allow for more people to add and allow for discussion// adding of various content.
+9) list of maybe ideas: calendars for groups... more interactivity/motion on home page
+10) simplicity
+11) simplicity
+12) dealing with the input of more dynamic data than just here's my name my email adress and a password + maybe a picture
+
+===================================================
+
+1) current input from the client is a cookie saying whether the user is logged in and if they are displaying all the users that are registered. additionally if the user that is logged in is an 'admin' they can delete users from this page
+2) the names of all the users//the knowledge of admins
+::database schema of all the tables used by this page::
+
+3) 
+4) if the user doesn't have a logged in cookie: doesn't display link to users in the navigation bar nor does it allow for the user to directly access the page and instead leads them to sign in page.
+if the user is signed in with a valid account/cookie a user link is displayed in the navigation bar and if they direct themselves to the users page they can view the other users of the site.
+if the user is signed in and is an admin they are treated as a valid user with the addition that they are able to delete user accounts from the user page.
