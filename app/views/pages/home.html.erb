@@ -2,5 +2,6 @@
 <p>Welcome to group-organize a place where people can post a project or group activity and find other excited people to work with. Organized human effort has proven itself to be the most powerful force. <br><br> We hope that our site can be a place that facilitates the type of organization and teamwork that promotes real scientific discovery and human advancement. <br><br> We have a responsibility to make use of our vast knowledge base and our ability to communicate with one another to identify goals and organize ourselves to achieve them.<br><br>  Join the community!
 </p>
 
+<% if !signed_in? %>
 <%= link_to "Sign up now!",signup_path, :class => "signup_button round" %>
-
+<% end %>
