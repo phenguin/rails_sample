@@ -14,8 +14,7 @@ namespace :db do
     admin2.toggle!(:admin)
     99.times do |n|
       name = Faker::Name.name
-      name_nows = name.gsub(/\s+/,"")
-      email = "#{name_nows}@nowhere.com"
+      email = "person-#{n}@example.com"
       password = "password"
       User.create!(:name => name,
                    :email => email,
