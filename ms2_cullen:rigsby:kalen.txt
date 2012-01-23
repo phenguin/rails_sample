@@ -8,9 +8,12 @@ Andy Kalendarian
 
 ===================================================
 
-1)
+1) We changed our idea very recently and have only just started rebuilding, so there isn't must to compare to checkpoint 1.
 2) page that lists all the users that have registered for and account and links to their page
-3) ....
+3) jas-6470.heroku.com
+Log in using username: jcullen@mit.edu,
+            password: justin
+Then click the "users" link from the header menu.
 4) Ruby on Rails //
 5) jQuery (although there isn't much front end yet)
 6) Firefox/Chrome
@@ -23,11 +26,23 @@ Andy Kalendarian
 
 ===================================================
 
-1) current input from the client is a cookie saying whether the user is logged in and if they are displaying all the users that are registered. additionally if the user that is logged in is an 'admin' they can delete users from this page
-2) the names of all the users//the knowledge of admins
-::database schema of all the tables used by this page::
+1) current input from the client is a cookie saying whether the user is logged in and if they are displaying all the users that are registered. 
+additionally if the user that is logged in is an 'admin' they can delete users from this page
 
-3) 
+2) Our most dynamic page lists all the users that are signed up.  However this page only works if you are logged in.
+Additionally, if the user logged in is an admin, a "delete" link appears next to each users name giving the ability to delete
+users from the site.
+
+Table "Users"
+------------
+id : autonumber
+name : string
+email : string (unique)
+password : string (storing hash of the password)
+admin : boolean
+
+3) Nothing beyond what is described before. 
+
 4) if the user doesn't have a logged in cookie: doesn't display link to users in the navigation bar nor does it allow for the user to directly access the page and instead leads them to sign in page.
 if the user is signed in with a valid account/cookie a user link is displayed in the navigation bar and if they direct themselves to the users page they can view the other users of the site.
 if the user is signed in and is an admin they are treated as a valid user with the addition that they are able to delete user accounts from the user page.
