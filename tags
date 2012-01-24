@@ -14,6 +14,8 @@ ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/
 CreateMicroposts	db/migrate/20120124000106_create_microposts.rb	/^class CreateMicroposts < ActiveRecord::Migration$/;"	c
 CreateUsers	db/migrate/20120103175402_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
 Micropost	app/models/micropost.rb	/^class Micropost < ActiveRecord::Base$/;"	c
+MicropostsController	app/controllers/microposts_controller.rb	/^class MicropostsController < ApplicationController$/;"	c
+MicropostsHelper	app/helpers/microposts_helper.rb	/^module MicropostsHelper$/;"	m
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
@@ -35,12 +37,14 @@ change	db/migrate/20120124000106_create_microposts.rb	/^  def change$/;"	f	class
 clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	class:SessionsHelper
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
 correct_user	app/controllers/users_controller.rb	/^  def correct_user$/;"	f	class:UsersController
+create	app/controllers/microposts_controller.rb	/^  def create$/;"	f	class:MicropostsController
 create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
 create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
 current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
 current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
 current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
 deny_access	app/helpers/sessions_helper.rb	/^  def deny_access$/;"	f	class:SessionsHelper
+destroy	app/controllers/microposts_controller.rb	/^  def destroy$/;"	f	class:MicropostsController
 destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
 destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
 down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
