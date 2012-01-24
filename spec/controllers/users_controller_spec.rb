@@ -34,6 +34,17 @@ describe UsersController do
       response.should have_selector( 'h1>img', :class => 'gravatar')
     end
 
+    it 'should show the users microposts' do
+      @mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      @mp2 = Factory(:micropost, :user => @user, :content => "Bar foo")
+      @microposts = [@mp1,@mp2]
+      get 'show', :id => @user
+      @microposts.each do |mp|
+        response.should have_selector("span.content", :content => mp.content)
+      end
+
+    end
+
   end
 
   describe "GET 'new'" do
@@ -311,9 +322,7 @@ describe UsersController do
         delete :destroy, :id => @user
         response.should redirect_to(users_path)
       end
-
     end
-
   end
 
 end
