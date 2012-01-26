@@ -20,6 +20,8 @@ MicropostsHelper	app/helpers/microposts_helper.rb	/^module MicropostsHelper$/;"	
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
 Relationship	app/models/relationship.rb	/^class Relationship < ActiveRecord::Base$/;"	c
+RelationshipsController	app/controllers/relationships_controller.rb	/^class RelationshipsController < ApplicationController$/;"	c
+RelationshipsHelper	app/helpers/relationships_helper.rb	/^module RelationshipsHelper$/;"	m
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
 SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
 SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
@@ -42,6 +44,7 @@ clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	cla
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
 correct_user	app/controllers/users_controller.rb	/^  def correct_user$/;"	f	class:UsersController
 create	app/controllers/microposts_controller.rb	/^  def create$/;"	f	class:MicropostsController
+create	app/controllers/relationships_controller.rb	/^  def create$/;"	f	class:RelationshipsController
 create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
 create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
 current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
@@ -49,6 +52,7 @@ current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	c
 current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
 deny_access	app/helpers/sessions_helper.rb	/^  def deny_access$/;"	f	class:SessionsHelper
 destroy	app/controllers/microposts_controller.rb	/^  def destroy$/;"	f	class:MicropostsController
+destroy	app/controllers/relationships_controller.rb	/^  def destroy$/;"	f	class:RelationshipsController
 destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
 destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
 down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
@@ -56,6 +60,10 @@ edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersControlle
 encrypt	app/models/user.rb	/^  def encrypt(string)$/;"	f	class:User
 encrypt_password	app/models/user.rb	/^  def encrypt_password$/;"	f	class:User
 feed	app/models/user.rb	/^  def feed$/;"	f	class:User
+follow!	app/models/user.rb	/^  def follow!(followed)$/;"	f	class:User
+followers	app/controllers/users_controller.rb	/^  def followers$/;"	f	class:UsersController
+following	app/controllers/users_controller.rb	/^  def following$/;"	f	class:UsersController
+following?	app/models/user.rb	/^  def following?(followed)$/;"	f	class:User
 gravatar_for	app/helpers/application_helper.rb	/^  def gravatar_for(user, options = { :size => 50 })$/;"	f	class:ApplicationHelper
 has_password?	app/models/user.rb	/^  def has_password?(submitted)$/;"	f	class:User
 help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesController
@@ -74,6 +82,7 @@ signed_in?	app/helpers/sessions_helper.rb	/^  def signed_in?$/;"	f	class:Session
 store_location	app/helpers/sessions_helper.rb	/^  def store_location$/;"	f	class:SessionsHelper
 test_sign_in	spec/spec_helper.rb	/^  def test_sign_in(user)$/;"	f
 title	app/helpers/application_helper.rb	/^  def title$/;"	f	class:ApplicationHelper
+unfollow!	app/models/user.rb	/^  def unfollow!(followed)$/;"	f	class:User
 up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	class:AddEmailUniquenessIndex
 update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
 user_from_remember_token	app/helpers/sessions_helper.rb	/^  def user_from_remember_token$/;"	f	class:SessionsHelper
