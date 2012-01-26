@@ -254,7 +254,7 @@ describe UsersController do
         @users = [@user, second, third]
         30.times do
           @users << Factory(:user, :name => Factory.next(:name),
-                           :email => Factory.next(:email))
+                            :email => Factory.next(:email))
         end
       end
 
@@ -348,13 +348,13 @@ describe UsersController do
       end
 
       it "should show user following" do
-        get _following, :id => @user
+        get :following, :id => @user
         response.should have_selector("a", :href => user_path(@other_user),
                                       :content => @other_user.name)
       end
 
       it "should show user followers" do
-        get _following, :id => @other_user
+        get :following, :id => @other_user
         response.should have_selector("a", :href => user_path(@user),
                                       :content => @user.name)
       end
