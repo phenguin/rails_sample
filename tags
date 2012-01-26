@@ -12,12 +12,14 @@ Application	config/application.rb	/^  class Application < Rails::Application$/;"
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 CreateMicroposts	db/migrate/20120124000106_create_microposts.rb	/^class CreateMicroposts < ActiveRecord::Migration$/;"	c
+CreateRelationships	db/migrate/20120126023841_create_relationships.rb	/^class CreateRelationships < ActiveRecord::Migration$/;"	c
 CreateUsers	db/migrate/20120103175402_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
 Micropost	app/models/micropost.rb	/^class Micropost < ActiveRecord::Base$/;"	c
 MicropostsController	app/controllers/microposts_controller.rb	/^class MicropostsController < ApplicationController$/;"	c
 MicropostsHelper	app/helpers/microposts_helper.rb	/^module MicropostsHelper$/;"	m
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
+Relationship	app/models/relationship.rb	/^class Relationship < ActiveRecord::Base$/;"	c
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
 SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
 SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
@@ -29,11 +31,13 @@ admin_user	app/controllers/users_controller.rb	/^  def admin_user$/;"	f	class:Us
 authenticate	app/helpers/sessions_helper.rb	/^  def authenticate$/;"	f	class:SessionsHelper
 authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
 authenticate_with_salt	app/models/user.rb	/^  def self.authenticate_with_salt(id, cookie_salt)$/;"	F	class:User
+authorized_user	app/controllers/microposts_controller.rb	/^  def authorized_user$/;"	f	class:MicropostsController
 change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:CreateUsers
 change	db/migrate/20120103203914_add_password_to_users.rb	/^  def change$/;"	f	class:AddPasswordToUsers
 change	db/migrate/20120103210849_add_salt_to_users.rb	/^  def change$/;"	f	class:AddSaltToUsers
 change	db/migrate/20120123072429_add_admin_to_users.rb	/^  def change$/;"	f	class:AddAdminToUsers
 change	db/migrate/20120124000106_create_microposts.rb	/^  def change$/;"	f	class:CreateMicroposts
+change	db/migrate/20120126023841_create_relationships.rb	/^  def change$/;"	f	class:CreateRelationships
 clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	class:SessionsHelper
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
 correct_user	app/controllers/users_controller.rb	/^  def correct_user$/;"	f	class:UsersController
