@@ -1,3 +1,7 @@
+<% content_for(:head) do %>
+  <%= javascript_include_tag 'pages/home' %>
+<% end %>
+
 <% if signed_in? %>
   <table cellspacing="0" class="front" summary="For signed-in users">
     <tr>

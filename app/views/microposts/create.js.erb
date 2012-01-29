@@ -1,2 +1,5 @@
-<% @feed_items = current_user.feed.paginate(:page => params[:page]) %>
- $('#feed').html("<%= escape_javascript(render('shared/feed')) %>")
+$('h1.micropost').before("<div class='flash success'>Micropost created!</div>");
+$('textarea#micropost_content').val("");
+$('div#chars_remaining').text("140 characters remaining in your message!")
+$("#feed").load("/ #feed");
+

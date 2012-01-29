@@ -1,0 +1,5 @@
+<% unless flash.nil? %>
+  <% flash.each do |key,val| %>
+    <div class="flash <%= key %>"><%= val %></div>
+  <% end %>
+<% end %>

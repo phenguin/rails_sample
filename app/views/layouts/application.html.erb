@@ -5,14 +5,13 @@
      <%= csrf_meta_tag %>
      <%= render 'layouts/stylesheets' %>
      <%= javascript_include_tag "application" %>
+     <%= yield(:head) %>
   </head>
   <body>
      <div class="container">
        <%= render 'layouts/header' %>
         <section class="round">
-        <% flash.each do |key,val| %>
-          <div class="flash <%= key %>"><%= val %></div>
-        <% end %>
+        <%= render :partial => 'shared/flash' %>
           <%= yield %>
        </section>
        <%= render 'layouts/footer' %>
