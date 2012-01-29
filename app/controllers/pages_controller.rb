@@ -15,4 +15,8 @@ class PagesController < ApplicationController
     @title = "Help"
   end
 
+  def week
+      @title = "Week"
+  end
+
 end
