@@ -181,4 +181,20 @@ describe User do
 
   end
 
+  describe 'user_articles' do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    it "should respond to 'user_articles'" do
+      @user.should respond_to(:user_articles)
+    end
+
+    it "should respond to 'bookmarks'" do
+      @user.should respond_to(:bookmarks)
+    end
+
+  end
+
 end

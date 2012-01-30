@@ -1,6 +1,7 @@
 <li>
 <b>
-  <%= link_to topic.name, '#' %>    
-  <%= link_to 'Unsubscribe', '#', :id => 'topic_unsubscribe' %>
+  <%= link_to topic.name, topic %>    
+  <% subscription = @user.subscriptions.find_by_topic_id(topic.id) %>
+  <%= link_to "unsubscribe", subscription, :method => :delete, :confirm => "You sure?", :title => "Unsubscribe from #{topic.name}", :class => "unsubscribe" %>
 </b>
 </li>

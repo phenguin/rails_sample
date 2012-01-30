@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :subscriptions
+  has_many :user_articles
   has_many :subscribed_topics, :through => :subscriptions, :source => :topic
+  has_many :bookmarks, :through => :subscriptions, :source => :article
 
   validates :password, :presence => true,
     :confirmation => true,

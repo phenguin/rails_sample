@@ -1,6 +1,8 @@
 SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :subscriptions, :only => [:create, :destroy]
+  resources :topics, :only => [:create, :show]
 
   root :to => 'pages#home'
   match '/help', :to => 'pages#help'
