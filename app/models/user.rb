@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :subscriptions
+  has_many :subscribed_topics, :through => :subscriptions, :source => :topic
 
   validates :password, :presence => true,
     :confirmation => true,
@@ -29,6 +30,14 @@ class User < ActiveRecord::Base
   def self.authenticate_with_salt(id, cookie_salt)
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
+  end
+
+  def subscribe!(topic)
+    subscriptions.create!( :topic_id => topic.id )
+  end
+
+  def subscribed?(topic)
+    subscriptions.find_by_topic_id(topic.id)
   end
 
   def has_password?(submitted)

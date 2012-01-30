@@ -1,5 +1,5 @@
 class Subscription < ActiveRecord::Base
-  attr_accessor :topic_id
+  attr_accessible :topic_id
   validates :user_id, :presence => true
   validates :topic_id, :presence => true
 

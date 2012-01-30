@@ -10,9 +10,17 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    @topic_ids = params[:topics][:id]
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Group-Organize!"
+      flash[:success] = "Welcome to ThisMonth!"
+
+      @topic_ids.each do |id|
+        @topic = Topic.find_by_id(id)
+        @user.subscribe!(@topic)
+        logger.debug(@topic.name)
+      end
+
       redirect_to user_path(@user)
     else
       @title = "Sign up"
