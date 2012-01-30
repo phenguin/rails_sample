@@ -1,10 +1,10 @@
 
 .container {
-  width: 710px;
+  width: 950px;
 }
 
 body {
-  background: #012901;
+  background: white;
 }
 
 header {
@@ -20,7 +20,7 @@ section {
   margin-top: 1em;
   font-size: 120%;
   padding: 14px;
-  background: #cccccc;
+  background: #c9cfc9;
 }
 
 section h1 {
@@ -95,7 +95,7 @@ a.signup_button {
 }
 
 /* Round corners */
-
+/*
 .round {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
@@ -240,6 +240,7 @@ li.headlink {
     margin-left: -1px;
     background-color: #999900;
     text-align:center;
+    position:absolute;
 }
 
 li.headlink a {
