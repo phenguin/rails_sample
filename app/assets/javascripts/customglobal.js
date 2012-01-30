@@ -1,11 +1,12 @@
 
 
+
+
+
+
 $(document).ready(function(){
+        $('li.headlink').hover(
+            function() { $('ul',this).css('display', 'block'); },
+            function() { $('ul', this).css('display', 'none'); });
 
-        $("a").click(function(event){
-            event.preventDefault();
-            $(this).hide("slow");
-
-            });
-        
-});
+        });
