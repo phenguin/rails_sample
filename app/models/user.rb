@@ -6,9 +6,11 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :subscriptions
+  has_many :affiliations
   has_many :user_articles
   has_many :subscribed_topics, :through => :subscriptions, :source => :topic
   has_many :bookmarks, :through => :subscriptions, :source => :article
+  has_many :groups, :through => :affiliations
 
   validates :password, :presence => true,
     :confirmation => true,
@@ -34,12 +36,26 @@ class User < ActiveRecord::Base
     (user && user.salt == cookie_salt) ? user : nil
   end
 
+  #methods for dealing with users / topics
   def subscribe!(topic)
     subscriptions.create!( :topic_id => topic.id )
   end
 
   def subscribed?(topic)
     subscriptions.find_by_topic_id(topic.id)
+  end
+
+  #methods for dealing with users / groups
+  def group_join!(group)
+    affiliations.create!( :group_id => group.id )
+  end
+
+  def group_member?(group)
+    affiliations.find_by_group_id(group.id)
+  end
+
+  def group_leave!(group)
+    affiliations.find_by_group_id(group.id).destroy
   end
 
   def has_password?(submitted)

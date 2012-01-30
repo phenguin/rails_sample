@@ -291,3 +291,29 @@ ul.topics a.unsubscribe {
   right : 5px;
 }
 
+/*Group page customizations*/
+div#group_week_nav li  {
+  display : inline;
+}
+
+div#group_week_nav li a {
+  color : white;
+  background : darkblue;
+  padding : 5px;
+  margin-left : 2.5em;
+  margin-right : 2.5em;
+}
+
+table#group_main  {
+  position : relative;
+}
+
+table#group_main tr:first  {
+  position : absolute;
+  top : 10px;
+}
+
+table#group_main tr.content  {
+  position : absolute;
+  top : 50px;
+}

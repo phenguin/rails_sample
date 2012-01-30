@@ -5,6 +5,7 @@ namespace :db do
     make_users
     make_topics
     make_articles
+    make_groups
   end
 end
 
@@ -72,3 +73,17 @@ def make_articles
 
 end
 
+def make_groups
+  user = User.first
+  group1 = Group.create( :name => "Sociology Study Group", :creator_id => user.id )
+  group2 = Group.create( :name => "Cool Kids Learning Group", :creator_id => user.id )
+
+  User.all[1..6].each do |u|
+    u.group_join!(group1)
+  end
+
+  User.all[4..9].each do |u|
+    u.group_join!(group2)
+  end
+
+end
