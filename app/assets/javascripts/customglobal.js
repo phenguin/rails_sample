@@ -15,7 +15,7 @@ $(document).ready(function(){
 /*
  *http://tutorialzine.com/2009/09/simple-ajax-website-jquery/
  * this will be for the little week transfer section */
-
+/*
 $(document).ready(function(){
         checkURL();
         $('ul li a').click(function (e){
@@ -57,4 +57,4 @@ function loadPage(url)
     });
 
 }
-
+*/
