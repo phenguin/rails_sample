@@ -1,4 +1,5 @@
 <h1><%= "#{@group.name}" %></h1>
+
 <div id="group_nav">
   <ul>
     <li>Main</li>
@@ -7,22 +8,32 @@
     <li></li>
   </ul>
 </div>
-<table cellspacing="0" id="group_main">
-  <tr>
-    <div id="group_week_nav">
-      <ul>
+
+<div id="group_week_nav">
+    <ul>
+        <!-- 
+        if we want to use this we need to have these hashes in they are used as a js parameter
+        could probably inherit the design of the main nav bar --!>
+
         <li><a class="round" href='#'>Week 1</a></li>
         <li><a class="round" href='#'>Week 2</a></li>
         <li><a class="round" href='#'>Week 3</a></li>
         <li><a class="round" href='#'>Week 4</a></li>
       </ul>
-    </div>
+</div>
 
-  </tr>
-  <tr class="content">
-    <td>
-    </td>
-    <td>
-    </td>
-  </tr>
-</table>
+<!--
+if we want to add css for this next bit
+#content{
+    margin-top: 10px;
+    }
+#loading{
+    visibility:hidden;
+    }
+    --!>
+
+<div id="content">
+    Well here we are in our content area.
+</div>
+
+

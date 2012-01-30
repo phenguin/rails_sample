@@ -1,10 +1,10 @@
 
 .container {
-  width: 710px;
+  width: 950px;
 }
 
 body {
-  background: #000033;
+  background: white;
 }
 
 header {
@@ -12,7 +12,6 @@ header {
 }
 
 header img {
-  padding: 1em;
   background: none;
 }
 
@@ -20,7 +19,7 @@ section {
   margin-top: 1em;
   font-size: 120%;
   padding: 14px;
-  background: #cccccc;
+  background: #c9cfc9;
 }
 
 section h1 {
@@ -95,7 +94,7 @@ a.signup_button {
 }
 
 /* Round corners */
-
+/*
 .round {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
@@ -194,78 +193,8 @@ div.field, div.actions {
   list-style: square;
 }
 
-p
-{
-  text-indent:20px;
-}
-
-/* this is for our little navigation bar*/
-ul, li{margin:0; border:0; padding:0; list-style:none;}
-#middlebar{
-  font-size:11px;
-  color:#3b5d14;
-  background:#90b557;
-  font-weight:bold;
-  padding:4px;
-  height:30px;
-}
-#middlebar .menu li {
-  background:url(lm.png) left top no-repeat;
-  height:30px;
-  float:left;
-  margin-right:10px;
-}
-#middlebar .menu li a{
-  color:#3b5d14;
-  text-decoration:none;
-  padding:0 10px;
-  height:30px;
-  line-height:30px;
-  display:block;
-  float:left;
-  padding:0 26px 0 10px;
-  background:url(rm.png) right top no-repeat;
-}
-#middlebar .menu li a:hover{
-  color:#666666;
-}
-
-/* and here is for sub-menu */
-#middlebar ul .submenu {
-  border:solid 1px #c9dea1;
-  border-top:none;
-  background:#FFFFFF;
-  position:relative;
-  top:4px;
-  width:150px;
-  padding:6px 0;
-  clear:both;
-  z-index:2;
-  display:none;
-}
-#middlebar ul .submenu li{
-  background:none;
-  display:block;
-  float:none;
-  margin:0 6px;
-  border:0;
-  height:auto;
-  line-height:normal;
-  border-top:solid 1px #DEDEDE;
-}
-#middlebar .submenu li a{
-  background:none;
-  display:block;
-  float:none;
-  padding:6px 6px;
-  margin:0;
-  border:0;
-  height:auto;
-  color:#105cbe;
-  line-height:normal;
-}
-#middlebar .submenu li a:hover{
-  background:#e3edef;
+p {
+    text-indent:15px;
 }
 
 /*Styling for topic list in user profile*/
@@ -340,24 +269,49 @@ ul li a:hover {
     text-decoration:none;
 }
 
-div#group_week_nav li a {
-  color : white;
-  background : darkblue;
-  padding : 5px;
-  margin-left : 2.5em;
-  margin-right : 2.5em;
+li.headlink ul {
+    position:absolute;
+    display:none; 
+    text-align:left;
+    
 }
 
-table#group_main  {
-  position : relative;
+li.headlink.hover ul {
+    display: block; 
 }
 
-table#group_main tr:first  {
-  position : absolute;
-  top : 10px;
+li.headlink ul li a {
+    padding: 7px;
+    height: 22px;
 }
 
-table#group_main tr.content  {
-  position : absolute;
-  top : 50px;
+/*rollover color*/
+li.headlink ul li a:hover {
+    background-color: green;
 }
+
+
+
+ul li a:hover {
+    text-decoration:none;
+}
+
+li.headlink {
+    background-color: white;
+}
+
+li.headlink ul {
+    padding-bottom: 10px
+}
+
+
+ul {
+    list-style: none;
+    text-color: #cccccc;
+}
+
+ul#navbar {
+    position:relative;
+    float:left;
+}
+/* end of nav bar stylings */
