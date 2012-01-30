@@ -194,78 +194,8 @@ div.field, div.actions {
   list-style: square;
 }
 
-p
-{
-  text-indent:20px;
-}
-
-/* this is for our little navigation bar*/
-ul, li{margin:0; border:0; padding:0; list-style:none;}
-#middlebar{
-  font-size:11px;
-  color:#3b5d14;
-  background:#90b557;
-  font-weight:bold;
-  padding:4px;
-  height:30px;
-}
-#middlebar .menu li {
-  background:url(lm.png) left top no-repeat;
-  height:30px;
-  float:left;
-  margin-right:10px;
-}
-#middlebar .menu li a{
-  color:#3b5d14;
-  text-decoration:none;
-  padding:0 10px;
-  height:30px;
-  line-height:30px;
-  display:block;
-  float:left;
-  padding:0 26px 0 10px;
-  background:url(rm.png) right top no-repeat;
-}
-#middlebar .menu li a:hover{
-  color:#666666;
-}
-
-/* and here is for sub-menu */
-#middlebar ul .submenu {
-  border:solid 1px #c9dea1;
-  border-top:none;
-  background:#FFFFFF;
-  position:relative;
-  top:4px;
-  width:150px;
-  padding:6px 0;
-  clear:both;
-  z-index:2;
-  display:none;
-}
-#middlebar ul .submenu li{
-  background:none;
-  display:block;
-  float:none;
-  margin:0 6px;
-  border:0;
-  height:auto;
-  line-height:normal;
-  border-top:solid 1px #DEDEDE;
-}
-#middlebar .submenu li a{
-  background:none;
-  display:block;
-  float:none;
-  padding:6px 6px;
-  margin:0;
-  border:0;
-  height:auto;
-  color:#105cbe;
-  line-height:normal;
-}
-#middlebar .submenu li a:hover{
-  background:#e3edef;
+p {
+    text-indent:15px;
 }
 
 /*Styling for topic list in user profile*/
@@ -291,9 +221,29 @@ ul.topics a.unsubscribe {
   right : 5px;
 }
 
-/*Group page customizations*/
-div#group_week_nav li  {
-  display : inline;
+
+/*                                   */
+/* this is for the nav barrrrrrr!!!! */
+/*                                   */
+
+ul {
+    list-style:none;
+}
+
+
+
+
+li.headlink {
+    width:155px;
+    float:left;
+    margin-left: -1px;
+    background-color: #999900;
+    text-align:center;
+}
+
+li.headlink a {
+    display: block; 
+    padding: 10px;
 }
 
 div#group_week_nav li a {
@@ -313,7 +263,27 @@ table#group_main tr:first  {
   top : 10px;
 }
 
-table#group_main tr.content  {
-  position : absolute;
-  top : 50px;
+li.headlink ul li a:hover {
+    background-color: #CCFFCC;
+}
+
+a {
+    color:white;
+}
+
+ul li a:hover {
+    text-decoration:none;
+}
+
+li.headlink {
+    background-color: white;
+}
+
+li.headlink ul {
+    padding-bottom: 10px
+}
+
+
+ul {
+    list-style: none;
 }
