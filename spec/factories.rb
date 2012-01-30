@@ -13,6 +13,24 @@ Factory.define :group do |group|
   group.creator_id 1
 end
 
+Factory.define :week do |week|
+  week.group_id 1
+  week.week_number 1
+end
+
+Factory.define :post do |post|
+  post.user_id 1
+  post.week_id 1
+  post.content "Whoo! a post!"
+end
+
+Factory.define :material do |material|
+  material.week_id 1
+  material.name "Test material"
+  material.description "Test description"
+  material.content "Page 34-66 of some stupid book"
+end
+
 Factory.define :topic do |topic|
   topic.name "Machine Learning"
   topic.description %{Learn how to inadvertently make robots kill people!}

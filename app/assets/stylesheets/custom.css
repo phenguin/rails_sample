@@ -291,9 +291,53 @@ ul.topics a.unsubscribe {
   right : 5px;
 }
 
-/*Group page customizations*/
-div#group_week_nav li  {
-  display : inline;
+/*                                   */
+/* this is for the nav barrrrrrr!!!! */
+/*                                   */
+
+
+
+li.headlink {
+    display:inline-block;
+    width:95px;
+    float:left;
+    margin-left: -1px;
+    background-color: #999900;
+    text-align:center;
+}
+/*navbar color*/
+li.headlink a {
+    display: block; 
+    padding: 10px;
+    background-color: #012b70;
+    text-color: #cccccc;
+    color: white;
+}
+
+li.headlink ul {
+    position:absolute;
+    display:none; 
+    text-align:left;
+    
+}
+
+li.headlink.hover ul {
+    display: block; 
+}
+
+li.headlink ul li a {
+    padding: 7px;
+    height: 22px;
+}
+
+/*rollover color*/
+li.headlink ul li a:hover {
+    background-color: green;
+}
+
+
+ul li a:hover {
+    text-decoration:none;
 }
 
 div#group_week_nav li a {
