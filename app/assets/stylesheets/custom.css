@@ -3,23 +3,23 @@
 }
 
 body {
-  background: #cff;
+  background: #000033;
 }
 
 header {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 header img {
   padding: 1em;
-  background: #fff;
+  background: none;
 }
 
 section {
   margin-top: 1em;
   font-size: 120%;
-  padding: 20px;
-  background: #fff;
+  padding: 14px;
+  background: #cccccc;
 }
 
 section h1 {
@@ -29,17 +29,17 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: #003300;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #003300;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+  color: #003300;
 }
 
 /* Navigation */
@@ -49,7 +49,7 @@ nav  {
 }
 
 nav  {
-  background-color: white;
+  background-color: #cccccc;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -71,7 +71,7 @@ nav ul li a  {
 }
 
 nav ul li a:visited  {
-  color: #09c;
+  color: #003300;
 }
 
 nav ul li a:hover  {
@@ -87,7 +87,7 @@ a.signup_button {
   text-align: center;
   width: 190px;
   color: #fff;
-  background: #6A0094;
+  background: #000033;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
@@ -191,4 +191,79 @@ padding: 5px;
 #error_explanation ul li {
 font-size: 12px;
 list-style: square;
+}
+
+p
+{
+    text-indent:20px;
+}
+
+
+/* this is for our little navigation bar*/
+ul, li{margin:0; border:0; padding:0; list-style:none;}
+#middlebar{
+    font-size:11px;
+    color:#3b5d14;
+    background:#90b557;
+    font-weight:bold;
+    padding:4px;
+    height:30px;
+}
+#middlebar .menu li {
+    background:url(lm.png) left top no-repeat;
+    height:30px;
+    float:left;
+    margin-right:10px;
+}
+#middlebar .menu li a{
+    color:#3b5d14;
+    text-decoration:none;
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    float:left;
+    padding:0 26px 0 10px;
+    background:url(rm.png) right top no-repeat;
+}
+#middlebar .menu li a:hover{
+    color:#666666;
+}
+
+/* and here is for sub-menu */
+#middlebar ul .submenu {
+    border:solid 1px #c9dea1;
+    border-top:none;
+    background:#FFFFFF;
+    position:relative;
+    top:4px;
+    width:150px;
+    padding:6px 0;
+    clear:both;
+    z-index:2;
+    display:none;
+}
+#middlebar ul .submenu li{
+    background:none;
+    display:block;
+    float:none;
+    margin:0 6px;
+    border:0;
+    height:auto;
+    line-height:normal;
+    border-top:solid 1px #DEDEDE;
+}
+#middlebar .submenu li a{
+    background:none;
+    display:block;
+    float:none;
+    padding:6px 6px;
+    margin:0;
+    border:0;
+    height:auto;
+    color:#105cbe;
+    line-height:normal;
+}
+#middlebar .submenu li a:hover{
+    background:#e3edef;
 }
