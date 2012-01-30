@@ -248,21 +248,19 @@ li.headlink a {
     background-color: #CCFFCC;
 }
 
-div#group_week_nav li a {
-  color : white;
-  background : darkblue;
-  padding : 5px;
-  margin-left : 2.5em;
-  margin-right : 2.5em;
+li.headlink ul {
+    display:none; 
+    text-align:left;
+    
 }
 
-table#group_main  {
-  position : relative;
+li.headlink.hover ul {
+    display: block; 
 }
 
-table#group_main tr:first  {
-  position : absolute;
-  top : 10px;
+li.headlink ul li a {
+    padding: 7px;
+    height: 22px;
 }
 
 li.headlink ul li a:hover {
@@ -289,3 +287,4 @@ li.headlink ul {
 ul {
     list-style: none;
 }
+/* end of nav bar stylings */
