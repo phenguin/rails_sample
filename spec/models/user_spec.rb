@@ -145,4 +145,21 @@ describe User do
       @user.should be_admin
     end
   end
+
+  describe 'subscriptions' do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    it "should respond to 'subscriptions'" do
+      @user.should respond_to(:subscriptions)
+    end
+
+    it "should respond to 'subscribed_topics'" do
+       @user.should respond_to(:subscribed_topics)     
+    end
+
+  end
+
 end

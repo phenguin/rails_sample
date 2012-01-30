@@ -8,6 +8,11 @@ Factory.define :user do |user|
   user.password_confirmation "secrets"
 end
 
+Factory.define :topic do |topic|
+  topic.name "Machine Learning"
+  topic.description %{Learn how to inadvertently make robots kill people!}
+end
+
 Factory.sequence :name do |n|
   "Person #{n}"
 end
@@ -15,3 +20,8 @@ end
 Factory.sequence :email do |n|
   "person-#{n}@example.com"
 end
+
+Factory.sequence :topic do |n|
+  "Interesting Topic #{n}"
+end
+
