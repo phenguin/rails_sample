@@ -8,25 +8,39 @@ AddAdminToUsers	db/migrate/20120123072429_add_admin_to_users.rb	/^class AddAdmin
 AddEmailUniquenessIndex	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^class AddEmailUniquenessIndex < ActiveRecord::Migration$/;"	c
 AddPasswordToUsers	db/migrate/20120103203914_add_password_to_users.rb	/^class AddPasswordToUsers < ActiveRecord::Migration$/;"	c
 AddSaltToUsers	db/migrate/20120103210849_add_salt_to_users.rb	/^class AddSaltToUsers < ActiveRecord::Migration$/;"	c
+Affiliation	app/models/affiliation.rb	/^class Affiliation < ActiveRecord::Base$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SampleApp
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Article	app/models/article.rb	/^class Article < ActiveRecord::Base$/;"	c
+ArticleTopics	app/models/article_topics.rb	/^class ArticleTopics < ActiveRecord::Base$/;"	c
+CreateAffiliations	db/migrate/20120130121135_create_affiliations.rb	/^class CreateAffiliations < ActiveRecord::Migration$/;"	c
+CreateArticleTopics	db/migrate/20120130104546_create_article_topics.rb	/^class CreateArticleTopics < ActiveRecord::Migration$/;"	c
+CreateArticles	db/migrate/20120130104445_create_articles.rb	/^class CreateArticles < ActiveRecord::Migration$/;"	c
+CreateGroups	db/migrate/20120130120907_create_groups.rb	/^class CreateGroups < ActiveRecord::Migration$/;"	c
 CreateSubscriptions	db/migrate/20120130032029_create_subscriptions.rb	/^class CreateSubscriptions < ActiveRecord::Migration$/;"	c
 CreateTopics	db/migrate/20120130031506_create_topics.rb	/^class CreateTopics < ActiveRecord::Migration$/;"	c
+CreateUserArticles	db/migrate/20120130105047_create_user_articles.rb	/^class CreateUserArticles < ActiveRecord::Migration$/;"	c
 CreateUsers	db/migrate/20120103175402_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Group	app/models/group.rb	/^class Group < ActiveRecord::Base$/;"	c
 PagesController	app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
 PagesHelper	app/helpers/pages_helper.rb	/^module PagesHelper$/;"	m
 SampleApp	config/application.rb	/^module SampleApp$/;"	m
 SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
 SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
 Subscription	app/models/subscription.rb	/^class Subscription < ActiveRecord::Base$/;"	c
+SubscriptionsController	app/controllers/subscriptions_controller.rb	/^class SubscriptionsController < ApplicationController$/;"	c
+SubscriptionsHelper	app/helpers/subscriptions_helper.rb	/^module SubscriptionsHelper$/;"	m
 Topic	app/models/topic.rb	/^class Topic < ActiveRecord::Base$/;"	c
+TopicsController	app/controllers/topics_controller.rb	/^class TopicsController < ApplicationController$/;"	c
+TopicsHelper	app/helpers/topics_helper.rb	/^module TopicsHelper$/;"	m
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserArticle	app/models/user_article.rb	/^class UserArticle < ActiveRecord::Base$/;"	c
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
 admin_user	app/controllers/users_controller.rb	/^  def admin_user$/;"	f	class:UsersController
-authenticate	app/controllers/users_controller.rb	/^  def authenticate$/;"	f	class:UsersController
+authenticate	app/helpers/sessions_helper.rb	/^  def authenticate$/;"	f	class:SessionsHelper
 authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
 authenticate_with_salt	app/models/user.rb	/^  def self.authenticate_with_salt(id, cookie_salt)$/;"	F	class:User
 change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:CreateUsers
@@ -35,22 +49,34 @@ change	db/migrate/20120103210849_add_salt_to_users.rb	/^  def change$/;"	f	class
 change	db/migrate/20120123072429_add_admin_to_users.rb	/^  def change$/;"	f	class:AddAdminToUsers
 change	db/migrate/20120130031506_create_topics.rb	/^  def change$/;"	f	class:CreateTopics
 change	db/migrate/20120130032029_create_subscriptions.rb	/^  def change$/;"	f	class:CreateSubscriptions
+change	db/migrate/20120130104445_create_articles.rb	/^  def change$/;"	f	class:CreateArticles
+change	db/migrate/20120130104546_create_article_topics.rb	/^  def change$/;"	f	class:CreateArticleTopics
+change	db/migrate/20120130105047_create_user_articles.rb	/^  def change$/;"	f	class:CreateUserArticles
+change	db/migrate/20120130120907_create_groups.rb	/^  def change$/;"	f	class:CreateGroups
+change	db/migrate/20120130121135_create_affiliations.rb	/^  def change$/;"	f	class:CreateAffiliations
 clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	class:SessionsHelper
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
+correct_user	app/controllers/subscriptions_controller.rb	/^  def correct_user$/;"	f	class:SubscriptionsController
 correct_user	app/controllers/users_controller.rb	/^  def correct_user$/;"	f	class:UsersController
+correct_user	app/helpers/sessions_helper.rb	/^  def correct_user$/;"	f	class:SessionsHelper
 create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/subscriptions_controller.rb	/^  def create$/;"	f	class:SubscriptionsController
 create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
 current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
 current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
 current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
 deny_access	app/helpers/sessions_helper.rb	/^  def deny_access$/;"	f	class:SessionsHelper
 destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+destroy	app/controllers/subscriptions_controller.rb	/^  def destroy$/;"	f	class:SubscriptionsController
 destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
 down	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def down$/;"	f	class:AddEmailUniquenessIndex
 edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
 encrypt	app/models/user.rb	/^  def encrypt(string)$/;"	f	class:User
 encrypt_password	app/models/user.rb	/^  def encrypt_password$/;"	f	class:User
 gravatar_for	app/helpers/application_helper.rb	/^  def gravatar_for(user, options = { :size => 50 })$/;"	f	class:ApplicationHelper
+group_join!	app/models/user.rb	/^  def group_join!(group)$/;"	f	class:User
+group_leave!	app/models/user.rb	/^  def group_leave!(group)$/;"	f	class:User
+group_member?	app/models/user.rb	/^  def group_member?(group)$/;"	f	class:User
 has_password?	app/models/user.rb	/^  def has_password?(submitted)$/;"	f	class:User
 help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesController
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
@@ -61,11 +87,14 @@ new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
 remember_token	app/helpers/sessions_helper.rb	/^  def remember_token$/;"	f	class:SessionsHelper
 secure_hash	app/models/user.rb	/^  def secure_hash(string)$/;"	f	class:User
+show	app/controllers/topics_controller.rb	/^  def show$/;"	f	class:TopicsController
 show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
 sign_in	app/helpers/sessions_helper.rb	/^  def sign_in(user)$/;"	f	class:SessionsHelper
 sign_out	app/helpers/sessions_helper.rb	/^  def sign_out$/;"	f	class:SessionsHelper
 signed_in?	app/helpers/sessions_helper.rb	/^  def signed_in?$/;"	f	class:SessionsHelper
 store_location	app/helpers/sessions_helper.rb	/^  def store_location$/;"	f	class:SessionsHelper
+subscribe!	app/models/user.rb	/^  def subscribe!(topic)$/;"	f	class:User
+subscribed?	app/models/user.rb	/^  def subscribed?(topic)$/;"	f	class:User
 test_sign_in	spec/spec_helper.rb	/^  def test_sign_in(user)$/;"	f
 title	app/helpers/application_helper.rb	/^  def title$/;"	f	class:ApplicationHelper
 up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	class:AddEmailUniquenessIndex

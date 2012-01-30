@@ -4,6 +4,16 @@ module SessionsHelper
     self.current_user = user
   end
 
+  def authenticate
+    deny_access unless signed_in?
+  end
+
+  def correct_user
+    @user = User.find(params[:id]) 
+    redirect_to(root_path) unless current_user?(@user)
+  end
+
+
   def deny_access
     store_location
     flash[:notice] = "Please log in to access this page"

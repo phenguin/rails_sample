@@ -10,7 +10,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120130032029) do
+ActiveRecord::Schema.define(:version => 20120130121135) do
+
+  create_table "affiliations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "affiliations", ["user_id", "group_id"], :name => "index_affiliations_on_user_id_and_group_id", :unique => true
+
+  create_table "article_topics", :force => true do |t|
+    t.integer  "topic_id"
+    t.integer  "article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.string   "link"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.integer  "creator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -44,6 +75,13 @@ ActiveRecord::Schema.define(:version => 20120130032029) do
   create_table "topics", :force => true do |t|
     t.string   "name"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_articles", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "article_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

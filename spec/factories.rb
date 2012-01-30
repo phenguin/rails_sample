@@ -8,6 +8,11 @@ Factory.define :user do |user|
   user.password_confirmation "secrets"
 end
 
+Factory.define :group do |group|
+  group.name "Machine Learning Study Group"
+  group.creator_id 1
+end
+
 Factory.define :topic do |topic|
   topic.name "Machine Learning"
   topic.description %{Learn how to inadvertently make robots kill people!}

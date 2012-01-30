@@ -181,4 +181,65 @@ describe User do
 
   end
 
+  describe 'user_articles' do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    it "should respond to 'user_articles'" do
+      @user.should respond_to(:user_articles)
+    end
+
+    it "should respond to 'bookmarks'" do
+      @user.should respond_to(:bookmarks)
+    end
+
+  end
+
+  describe "groups" do
+
+    before(:each) do
+      @user = Factory(:user)
+      @group = Factory(:group)
+    end
+
+    it "should respond to 'affiliations'" do
+      @user.should respond_to(:affiliations)
+    end
+
+    it "should respond to 'groups'" do
+      @user.should respond_to(:groups)
+    end
+
+    it "should respond to 'group_join!'" do
+      @user.should respond_to(:group_join!)
+    end
+
+    it "should respond to 'group_member?'" do
+      @user.should respond_to(:group_member?)
+    end
+
+    it "should respond to 'group_leave!'" do
+      @user.should respond_to(:group_leave!)
+    end
+
+    it "group_join! should add the user to the group" do
+      @user.group_join!(@group)
+      @user.should be_group_member(@group)
+    end
+
+    it "group should be included in users group list" do
+      @user.group_join!(@group)
+      @user.groups.should include(@group)
+    end
+
+    it "group_leave! should remove user from the group" do
+      @user.group_join!(@group)
+      @user.group_leave!(@group)
+      @user.should_not be_group_member(@group)
+    end
+
+  end
+
 end
