@@ -10,9 +10,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+
+    #in case we are submitting from somewhere other than the web form.. i.e. tests
+    @topic_ids = params[:topic].nil? ? [] : params[:topic][:id]
+
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Group-Organize!"
+      flash[:success] = "Welcome to ThisMonth!"
+
+      @topic_ids.each do |id|
+        @topic = Topic.find_by_id(id)
+        @user.subscribe!(@topic)
+        logger.debug(@topic.name)
+      end
+
       redirect_to user_path(@user)
     else
       @title = "Sign up"
@@ -34,6 +45,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @topics = @user.subscribed_topics
     @title = "#{@user.name}'s Profile"
   end
 

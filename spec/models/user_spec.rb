@@ -145,4 +145,40 @@ describe User do
       @user.should be_admin
     end
   end
+
+  describe 'subscriptions' do
+
+    before(:each) do
+      @user = Factory(:user)
+      @topic = Factory(:topic)
+    end
+
+    it "should respond to 'subscriptions'" do
+      @user.should respond_to(:subscriptions)
+    end
+
+    it "should respond to 'subscribed_topics'" do
+       @user.should respond_to(:subscribed_topics)     
+    end
+
+    it "should have a 'subscribe!' method" do
+      @user.should respond_to(:subscribe!)
+    end
+
+    it "should respond to 'subscribed?'" do
+       @user.should respond_to(:subscribed?)     
+    end
+
+    it "should subscribe to a topic" do
+      @user.subscribe!(@topic)
+      @user.should be_subscribed(@topic)
+    end
+
+    it "should include the topic in the users list of topics" do
+      @user.subscribe!(@topic)
+      @user.subscribed_topics.should include(@topic)
+    end
+
+  end
+
 end

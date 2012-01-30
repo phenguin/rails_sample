@@ -1,3 +1,4 @@
+
 .container {
   width: 710px;
 }
@@ -77,7 +78,7 @@ nav ul li a:visited  {
 nav ul li a:hover  {
   text-decoration: underline;
 }
- 
+
 /* Sign-up Button */
 
 a.signup_button {
@@ -102,15 +103,15 @@ a.signup_button {
 }
 
 footer {
-text-align: center;
-margin-top: 10px;
-width: 710px;
-margin-left: auto;
-margin-right: auto;
+  text-align: center;
+  margin-top: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer nav {
-float: none;
+  float: none;
 }
 
 /*User index page styling*/
@@ -122,7 +123,7 @@ ul.users  {
   list-style: none
 }
 
- /* User show page */
+/* User show page */
 
 table.profile {
   width: 100%;
@@ -152,53 +153,78 @@ div.field, div.actions {
 }
 
 /*Signup page error message stylings*/
- .field_with_errors {
-margin-top: 10px;
-padding: 2px;
-background-color: red;
-display: table;
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
 }
 
 .field_with_errors label {
-color: #fff;
+  color: #fff;
 }
 
 #error_explanation {
-width: 400px;
-border: 2px solid red;
-padding: 7px;
-padding-bottom: 12px;
-margin-bottom: 20px;
-background-color: #f0f0f0;
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 }
 
 #error_explanation h2 {
-text-align: left;
-font-weight: bold;
-padding: 5px 5px 5px 15px;
-font-size: 12px;
-margin: -7px;
-background-color: #c00;
-color: #fff;
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
 }
 
 #error_explanation p {
-color: #333;
-margin-bottom: 0;
-padding: 5px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
 }
 
 #error_explanation ul li {
-font-size: 12px;
-list-style: square;
+  font-size: 12px;
+  list-style: square;
 }
 
 p {
     text-indent:15px;
 }
 
+/*Styling for topic list in user profile*/
+div.topic_list  {
+  background : #c9dea1;
+  border : 1px solid black;
+  padding : 10px;
+  margin : 5px;
+}
 
+ul.topics li  {
+  background : white;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  position: relative;
+}
+
+ul.topics a.unsubscribe {
+  position : absolute;
+  right : 5px;
+}
+
+
+/*                                   */
 /* this is for the nav barrrrrrr!!!! */
+/*                                   */
 
 ul {
     list-style:none;
