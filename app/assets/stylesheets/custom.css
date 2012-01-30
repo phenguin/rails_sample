@@ -236,7 +236,7 @@ li.headlink {
     background-color: #999900;
     text-align:center;
 }
-
+/*navbar color*/
 li.headlink a {
     display: block; 
     padding: 10px;
@@ -246,6 +246,7 @@ li.headlink a {
 }
 
 li.headlink ul {
+    position:absolute;
     display:none; 
     text-align:left;
     
@@ -260,6 +261,7 @@ li.headlink ul li a {
     height: 22px;
 }
 
+/*rollover color*/
 li.headlink ul li a:hover {
     background-color: green;
 }
@@ -287,6 +289,7 @@ ul {
 }
 
 ul#navbar {
+    position:relative;
     float:left;
 }
 /* end of nav bar stylings */
