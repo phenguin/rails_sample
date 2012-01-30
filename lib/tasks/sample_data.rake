@@ -30,8 +30,12 @@ def make_users
 end
 
 def make_topics
-  20.times do |n|
-    name = Faker::Lorem.words(2)
+  topics = %w{Literature Mathematics Animals Psychology Science Archaeology
+  Painting Debating Racketeering Scheming Oodling Noodling Doodling Programming
+  Racing Blahblahblah}
+
+  topics.length.times do |n|
+    name = topics[n]
     description = Faker::Lorem.sentence(8)
     Topic.create!(:name => name,
                   :description => description)

@@ -34,6 +34,17 @@ describe UsersController do
       response.should have_selector( 'h1>img', :class => 'gravatar')
     end
 
+    it 'should list the users subscribed topics' do
+      topic1 = Factory(:topic)
+      topic2 = Factory(:topic, :name => Factory.next(:topic))
+      topics = [topic1,topic2]
+      topics.each { |t| @user.subscribe!(t) }
+      get 'show', :id => @user
+      topics.each do |topic|
+        response.should have_selector("li", :content => topic.name)
+      end
+    end
+
   end
 
   describe "GET 'new'" do
@@ -61,17 +72,17 @@ describe UsersController do
 
       it 'should not create a new user' do
         lambda do
-          post :create, :user => @attr
+          post :create, :user => @attr, :id => []
         end.should_not change(User,:count)
       end
 
       it 'should have the right title' do
-        post :create, :user => @attr
+        post :create, :user => @attr, :id => []
         response.should have_selector( 'title', :content => "Sign up")
       end
 
       it 'should render the new page' do
-        post :create, :user => @attr
+        post :create, :user => @attr, :id => []
         response.should render_template('new')
       end
 
@@ -85,23 +96,23 @@ describe UsersController do
       end
 
       it 'should display a welcome message' do
-        post :create, :user => @attr
+        post :create, :user => @attr, :id => []
         flash[:success].should =~ /welcome/i
       end
 
       it 'should create a new user' do
         lambda do
-          post :create, :user => @attr
+          post :create, :user => @attr, :id => []
         end.should change(User, :count).by(1)
       end
 
       it 'should redirect to the user show page' do
-        post :create, :user => @attr
+        post :create, :user => @attr, :id => []
         response.should redirect_to(user_path(assigns(:user)))
       end
 
       it 'should automatically sign the user in' do
-        post :create, :user => @attr
+        post :create, :user => @attr, :id => []
         controller.should be_signed_in
       end
 

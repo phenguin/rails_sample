@@ -10,7 +10,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    @topic_ids = params[:topics][:id]
+
+    #in case we are submitting from somewhere other than the web form.. i.e. tests
+    @topic_ids = params[:topic].nil? ? [] : params[:topic][:id]
+
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to ThisMonth!"
@@ -42,6 +45,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @topics = @user.subscribed_topics
     @title = "#{@user.name}'s Profile"
   end
 

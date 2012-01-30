@@ -5,11 +5,25 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <b>Email: </b><%= @user.email %>
+      <b>Email: </b><%= @user.email %><br />
+
+      <div class="topic_list round">
+
+        <% if @topics.empty? %>
+          <%= "#{@user.name} hasn't subscribed to any topics!" %>
+        <% else %>
+          <b><%= "#{@user.name}'s followed topics: " %></b>
+        <% end %>
+
+        <ul class="topics">
+          <%= render @topics %>
+        </ul>
+      </div>
+
     </td>
-     <td class="sidebar round">
-       <strong>Name:</strong> <%= @user.name %><br />
-        <strong>URL: </strong> <%= link_to user_path(@user), @user %>
+    <td class="sidebar round">
+      <strong>Name:</strong> <%= @user.name %><br />
+      <strong>URL: </strong> <%= link_to user_path(@user), @user %>
     </td>
   </tr>
 </table>
