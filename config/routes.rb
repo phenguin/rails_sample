@@ -14,7 +14,14 @@ SampleApp::Application.routes.draw do
     end
   end
 
+  resources :user_articles do
+    member do
+      put :mark_read
+    end
+  end
+
   root :to => 'pages#home'
+  match '/bookmark', :to => 'user_articles#bookmark'
   match '/help', :to => 'pages#help'
 
   match '/signup', :to => 'users#new'

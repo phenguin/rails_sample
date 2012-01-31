@@ -1,16 +1,5 @@
 <h1><%= "Hi #{current_user.name}! Welcome to ThisMonth" %></h1>
 
-<% if @groups.empty? %>
-  <b>You haven't joined any groups!</b>
-<% else %>
-  <b>Your groups:</b>
-  <div class="user_groups">
-    <ul>
-      <%= render @groups %>
-      <li>
-      <%= link_to "Create a new group,", new_group_path %>
-      <%= link_to "or find one to join!", groups_path %>
-      </li>
-    </ul>
-  </div>
-<% end %>
+
+ <%= render :partial => 'users/left_bar' %>
+ <%= render :partial => 'users/right_bar' %>

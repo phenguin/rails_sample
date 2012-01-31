@@ -1,0 +1,5 @@
+<% @articles ||= Article.all %>
+<table class="feed">
+  <%= render @articles %>
+  <%= will_paginate @articles %>
+</table>

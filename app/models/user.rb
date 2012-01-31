@@ -5,12 +5,12 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 
-  has_many :subscriptions
-  has_many :affiliations
-  has_many :user_articles
-  has_many :posts
+  has_many :subscriptions, :dependent => :destroy
+  has_many :affiliations, :dependent => :destroy
+  has_many :user_articles, :dependent => :destroy
+  has_many :posts, :dependent => :destroy
   has_many :subscribed_topics, :through => :subscriptions, :source => :topic
-  has_many :bookmarks, :through => :subscriptions, :source => :article
+  has_many :bookmarks, :through => :user_articles, :source => :article
   has_many :groups, :through => :affiliations
 
   validates :password, :presence => true,
@@ -44,6 +44,23 @@ class User < ActiveRecord::Base
 
   def subscribed?(topic)
     subscriptions.find_by_topic_id(topic.id)
+  end
+
+  #methods for dealing with users/ articles
+  def bookmark!(article)
+    user_articles.create!( :article_id => article.id )
+  end
+  
+  def bookmarked?(article)
+    user_articles.find_by_article_id(article.id)
+  end
+
+  def mark_read!(article)
+    article = user_articles.find_by_article_id(article.id)
+    if article.read_date.nil?
+      article.read_date = Time.now
+      article.save!
+    end
   end
 
   #methods for dealing with users / groups
