@@ -1,14 +1,14 @@
 <% content_for :javascript do %>
-<%= render 'week_links.js' %>
+  <%= render 'week_links.js' %>
 <% end %>
 
 <h1><%= "#{@group.name}" %></h1>
 
 <div id="group_nav">
   <ul class="grouplink">
-      <li><a href="">Main</a></li>
-      <li><a href="">Group Members</a></li>
-      <li><a href="">Resources</a></li>
+    <li><a href="#">Main</a></li>
+    <li><a href="#">Group Members</a></li>
+    <li><a href="#">Resources</a></li>
   </ul>
 </div>
 
@@ -19,18 +19,18 @@
 </div>
 <div id="clear">
 </div>
-    <br><br><br>
+<br><br><br>
 
 
-    <div id="left">
-        <p> LEFT</p>
-    </div>
-    <div id="right">
-      <%= render 'weeks/post_display' %>
-    </div>
-    <div id="clear">
-       
-    </div>
+<div id="left">
+  <p> LEFT</p>
+</div>
+<div id="right">
+  <%= render 'weeks/post_display' %>
+</div>
+<div id="clear">
+
+</div>
 
 
 

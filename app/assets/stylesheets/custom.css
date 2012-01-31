@@ -418,7 +418,12 @@ div#right  {
 }
 
 div#right textarea#post_content {
-  height : 60px;
+  width:400px !important;
+  min-width:400px !important;
+  max-width:400px !important;
+  height:60px !important;
+  min-height:60px !important;
+  max-height:60px !important;
 }
 
 /*div#right div.flash.success  {*/

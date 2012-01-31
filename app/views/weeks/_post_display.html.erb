@@ -1,17 +1,23 @@
-<table class="discussion" summary="User Discussion">
-  <tr hidden=true id="flash_notice">
-    <td></td>
-    <td></td>
-  </tr>
-  <%= render @posts %>
-</table>
-<% logger.debug @user %>
+<% unless @posts.empty? %>
+  <table class="discussion" summary="User Discussion">
+    <tr id="flash_notice">
+      <td></td>
+      <td><h2><%= "Week #{@week.week_number}" %></h2></td>
+    </tr>
+    <%= render @posts %>
+  </table>
+<% else %>
+  <b>Be the first to post!</b>
+<% end %>
+
+
 <% @user ||= current_user %>
+
 <%= form_for @user.posts.build(:week_id => @week.id), :remote => true do |f| %>
   <div class="field">
     <%= f.text_area :content %>
   </div>
-   <div class="field">
+  <div class="field">
     <%= f.hidden_field :week_id %>
   </div>
   <div class="actions">

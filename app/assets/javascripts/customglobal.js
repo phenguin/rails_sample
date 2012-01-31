@@ -7,10 +7,15 @@
 
 $(document).ready(function(){
         $('li.headlink').hover(
-            function() { $('ul',this).css('display', 'block'); },
-            function() { $('ul', this).css('display', 'none'); });
-
+            function() { $('ul',this).slideDown(300); },
+            function() { $('ul', this).slideUp(30); });
         });
+
+//$(document).ready(function(){
+        //$('li.headlink').hover(
+            //function() { $('ul',this).css('display', 'block'); },
+            //function() { $('ul', this).css('display', 'none'); });
+        //});
 
 /*
  *http://tutorialzine.com/2009/09/simple-ajax-website-jquery/
