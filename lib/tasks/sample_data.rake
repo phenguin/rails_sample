@@ -4,7 +4,6 @@ namespace :db do
     Rake::Task['db:reset'].invoke
     make_users
     make_topics
-    make_articles
     make_groups
     make_weeks
   end

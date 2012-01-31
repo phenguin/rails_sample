@@ -1,4 +1,4 @@
-require 'ruby-debug'
+#require 'ruby-debug'
 
 SampleApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb

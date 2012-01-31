@@ -1,5 +1,6 @@
 <h1><%= "Hi #{current_user.name}! Welcome to ThisMonth.org" %></h1>
 
+<%= render :partial => 'shared/bookmark_save' %>
 
- <%= render :partial => 'users/left_bar' %>
- <%= render :partial => 'users/right_bar' %>
+<%= render :partial => 'users/left_bar' %>
+<%= render :partial => 'users/right_bar' %>
