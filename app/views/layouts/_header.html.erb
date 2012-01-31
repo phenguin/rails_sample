@@ -2,8 +2,14 @@
 <div id="navsection">
   <div class="innertube round">
     <nav>
-    <ul>
-      <div class="usernav">
+    <div class="groupnav">
+      <ul>
+        <li><%= link_to "Create a group!", new_group_path, :class => "round filled" %></li>
+        <li><%= link_to "Find a group!", groups_path, :class => "round filled" %></li>
+      </ul>
+    </div>
+    <div class="usernav">
+      <ul>
         <li><%= link_to "Home", root_path %></li>
         <% if signed_in? %>
           <li><%= link_to "Settings", edit_user_path(@current_user) %></li>
@@ -14,8 +20,8 @@
           <li><%= link_to "Log in", signin_path %></li>
           <li><%= link_to "Sign up!", signup_path %></li>
         <% end %>
-      </div>
-    </ul>
+      </ul>
+    </div>
     </nav>
   </div>
 </div>

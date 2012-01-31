@@ -6,9 +6,6 @@
   <h1><%= "#{@group.name}" %></h1>
 </div>
 
-<%= render :partial => 'groups/right_bar' %>
-
-<%= render :partial => 'groups/left_bar' %>
 
 <table border="0" cellspacing="0" cellpadding="0" class="split">
   <tr>
@@ -30,6 +27,6 @@
     </td>
   </tr>
 </table>
-<div id="clear">
 
-</div>
+<%= render :partial => 'groups/right_bar' %>
+<%= render :partial => 'groups/left_bar' %>

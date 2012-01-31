@@ -26,6 +26,12 @@ em {
   right: 0;
 }
 
+#navsection .groupnav  {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /*navigation section*/
 #navsection  {
   background: none repeat scroll 0 0 #3E3F41;
@@ -39,12 +45,14 @@ em {
 #navsection .innertube  {
   margin: 0 200px 0 230px;
   padding-top: 5px;
+  position: relative;
+}
+
+#navsection .groupnav a  {
+  background-color: green;
 }
 
 #navsection ul { 
-  position: relative;
-  top: 0;
-  right: 0;
   margin: 0;
   list-style-type: none;
   /*background-color: #000; */
@@ -83,6 +91,8 @@ em {
 
 #contentcolumn .innertube  {
   background-color: white;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 
 #leftcolumn {
@@ -94,17 +104,21 @@ em {
 
 #leftcolumn .innertube  {
   background-color: white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 #rightcolumn {
   background: none repeat scroll 0 0 transparent;
   float: left;
-  margin-left: -190px;
-  width: 190px;
+  margin-left: -210px;
+  width: 210px;
 }
 
 #rightcolumn .innertube {
   background-color: white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 
@@ -129,6 +143,7 @@ em {
 p, div, span  {
   color: #333333;
   font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  font-weight: 700;
 }
 
 ul.feed li.feedItem:after {
@@ -140,14 +155,15 @@ ul.feed li.feedItem:after {
 }
 
 ul.feed li.feedItem {
-border-top: 1px dotted #CCCCCC;
+border-top: 2px dotted #CCCCCC;
 }
 
 ul  {
   list-style: none;
+  padding: 0 0 0 0;
 }
 
-#leftcolumn .header  {
+ .header  {
   margin-top: .5em;
   padding: 5px 0 1px ;
   text-align:center;
@@ -155,9 +171,12 @@ ul  {
   visibility: visible;
 }
 
-#leftcolumn h2 {
-  font-size: 16pt;
-  font-weight: bold;
+h2 {
+  font-family: helvetica,arial,clean,sans-serif;
+  font-size: 18pt;
+  text-align: center;
+  font-weight: 700;
+  color: #505961;
 }
 
 /* Round corners */
@@ -220,6 +239,15 @@ ul.week li a {
 
 #right {
     width:420px;
+}
+
+#right textarea#post_content {
+  width:400px !important;
+  min-width:400px !important;
+  max-width:400px !important;
+  height:60px !important;
+  min-height:60px !important;
+  max-height:60px !important;
 }
 
 

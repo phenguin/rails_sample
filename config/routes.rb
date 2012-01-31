@@ -15,6 +15,7 @@ SampleApp::Application.routes.draw do
   end
 
   root :to => 'pages#home'
+  match '/bookmark', :to => 'user_articles#bookmark'
   match '/help', :to => 'pages#help'
 
   match '/signup', :to => 'users#new'

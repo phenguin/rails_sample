@@ -1,7 +1,3 @@
-<h1><%= "Hi #{current_user.name}! Welcome to ThisMonth" %></h1>
-
- <%= render :partial => 'shared/bookmark_save' %>
-
 <%= content_for :left do %>
 <% if @groups.empty? %>
   <b>You haven't joined any groups!</b>
@@ -19,13 +15,4 @@
     </ul>
   </div>
 <% end %>
-<% end %>
-
-<%= content_for :right do %>
-  <div class="header">
-    <h2>Bookmarks</h2>
-  </div>
-  <div class="user_articles">
-    <%= render 'articles/article_display' %>
-  </div>
 <% end %>
