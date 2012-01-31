@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     @title = "Home"
     if signed_in?
       @groups = current_user.groups
-      @articles = current_user.bookmarks
+      @articles = Article.unread_by(current_user)
       #@articles = current_user.articles
     end
   end

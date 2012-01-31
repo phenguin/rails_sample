@@ -12,4 +12,13 @@ class UserArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def mark_read
+    @article = Article.find(params[:id])
+    current_user.mark_read!(@article)
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js
+    end
+  end
+
 end

@@ -2,30 +2,6 @@
 
  <%= render :partial => 'shared/bookmark_save' %>
 
-<%= content_for :left do %>
-<% if @groups.empty? %>
-  <b>You haven't joined any groups!</b>
-<% else %>
-  <div class="header">
-    <h2>Your groups</h2>
-  </div>
-  <div class="user_groups">
-    <ul class="feed">
-      <%= render @groups %>
-      <li>
-      <%= link_to "Create a new group,", new_group_path %>
-      <%= link_to "or find one to join!", groups_path %>
-      </li>
-    </ul>
-  </div>
-<% end %>
-<% end %>
 
-<%= content_for :right do %>
-  <div class="header">
-    <h2>Bookmarks</h2>
-  </div>
-  <div class="user_articles">
-    <%= render 'articles/article_display' %>
-  </div>
-<% end %>
+ <%= render :partial => 'users/left_bar' %>
+ <%= render :partial => 'users/right_bar' %>

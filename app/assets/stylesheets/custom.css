@@ -146,7 +146,7 @@ p, div, span  {
   font-weight: 700;
 }
 
-ul.feed li.feedItem:after {
+.feed .feedItem:after {
   clear: both;
   content: ".";
   display: block;
@@ -154,7 +154,7 @@ ul.feed li.feedItem:after {
   visibility: hidden;
 }
 
-ul.feed li.feedItem {
+.feed .feedItem {
 border-top: 2px dotted #CCCCCC;
 }
 
