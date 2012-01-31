@@ -17,15 +17,15 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(params[:group])
 
-    @topic_ids = params[:topics].nil? ? [] : params[:topics][:id]
+    #@topic_ids = params[:topics].nil? ? [] : params[:topics][:id]
 
     if @group.save
       flash[:success] = "Group #{@group.name} successfully created!"
 
-      @topic_ids.each do |id|
-        topic = Topic.find(id)
-        @group.topic_add!(topic)
-      end
+      #@topic_ids.each do |id|
+        #topic = Topic.find(id)
+        #@group.topic_add!(topic)
+      #end
 
       [1,2,3,4].each do |n|
         @group.weeks.create!( :week_number => n )

@@ -13,16 +13,16 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     #in case we are submitting from somewhere other than the web form.. i.e. tests
-    @topic_ids = params[:topics].nil? ? [] : params[:topics][:id]
+    #@topic_ids = params[:topics].nil? ? [] : params[:topics][:id]
 
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to ThisMonth!"
 
-      @topic_ids.each do |id|
-        @topic = Topic.find_by_id(id)
-        @user.subscribe!(@topic)
-      end
+      #@topic_ids.each do |id|
+        #@topic = Topic.find_by_id(id)
+        #@user.subscribe!(@topic)
+      #end
 
       redirect_to user_path(@user)
     else
