@@ -8,6 +8,12 @@ SampleApp::Application.routes.draw do
   resources :groups
   resources :posts, :only => [:create, :destroy]
 
+  resources :groups do
+    member do
+      get :members
+    end
+  end
+
   root :to => 'pages#home'
   match '/help', :to => 'pages#help'
 

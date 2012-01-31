@@ -1,0 +1,22 @@
+<h1>Members of <%= @group.name %>:</h1>
+
+<div id="group_nav">
+  <ul class="grouplink">
+    <li><%= link_to 'Main', @group %></li>
+    <li><%= link_to "Members", members_group_path(@group) %></li>
+    <li><a href="#">Resources</a></li>
+  </ul>
+</div>
+
+<div id="group_week_nav">
+  <ul class="week">
+    <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
+  </ul>
+</div>
+<div id="clear">
+</div>
+<br><br><br>
+
+<ul>
+  <%= render @users %>
+</ul>
