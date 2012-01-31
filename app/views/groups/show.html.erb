@@ -2,7 +2,11 @@
   <%= render 'week_links.js' %>
 <% end %>
 
-<h1><%= "#{@group.name}" %></h1>
+<div class="header">
+  <h1><%= "#{@group.name}" %></h1>
+  <h3><b><%= "Week #{@week.week_number}" %></b></h3>
+</div>
+
 
 <% if @group.user_is_admin?(current_user) %>
   <div class="delete_group">

@@ -1,7 +1,11 @@
 h1  {
   font-weight: bold;
+}
+
+section div.header  {
   text-align: center;
 }
+
 .container {
   width: 950px;
 }
@@ -407,7 +411,7 @@ ul.week li a {
 }
 
 table.discussion {
-  margin-top: 1em;
+  margin-bottom:5px;
 }
 
 table.discussion tr {
@@ -423,7 +427,8 @@ table.discussion tr td.gravatar {
 table.discussion tr td.post {
   border-top: 1px solid #ccc;
   vertical-align: top;
-  padding-top: 10px;
+  padding-top: 1px;
+  padding-bottom: 3px;
 }
 
 table.discussion tr td.post span.timestamp {

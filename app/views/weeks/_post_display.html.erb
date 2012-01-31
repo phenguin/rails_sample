@@ -1,14 +1,13 @@
-<% unless @posts.empty? %>
-  <table class="discussion" summary="User Discussion">
-    <tr id="flash_notice">
-      <td></td>
-      <td><h2><%= "Week #{@week.week_number}" %></h2></td>
-    </tr>
-    <%= render @posts %>
-  </table>
-<% else %>
+<% if @posts.empty? %>
+<div class="empty_filler">
   <b>Be the first to post!</b>
+</div>
 <% end %>
+<table class="discussion" summary="User Discussion">
+  <% unless @posts.empty? %>
+    <%= render @posts %>
+  <% end %>
+</table>
 
 
 <% @user ||= current_user %>

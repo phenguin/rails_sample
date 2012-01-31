@@ -79,7 +79,8 @@ class GroupsController < ApplicationController
   private
 
   def verify_admin
-    redirect_to root_path unless user_is_admin?(current_user)
+    @group = Group.find(params[:id])
+    redirect_to root_path unless @group.user_is_admin?(current_user)
   end
 
 end

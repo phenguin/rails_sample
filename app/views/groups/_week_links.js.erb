@@ -7,6 +7,7 @@ $("ul.week a.week"+n).bind("click", function () {
 
   <% @week = week %>
   <% @posts = week.posts %>
+  $("section div.header h3 b").html("<%= escape_javascript("Week #{@week.week_number}") %>")
   var post_display = $("<%= escape_javascript(render('weeks/post_display')) %>");
   $("div#right").html(post_display);
 
