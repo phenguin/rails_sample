@@ -1,0 +1,7 @@
+<%= content_for :right do %>
+  <div id="group_week_nav">
+    <ul class="week">
+      <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
+    </ul>
+  </div>
+<% end %>

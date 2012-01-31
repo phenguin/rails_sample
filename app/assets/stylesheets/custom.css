@@ -78,7 +78,7 @@ em {
 
 #contentcolumn {
   margin: 0 210px 0 240px;
-  background-color: white;
+  background-color: transparent;
 }
 
 #contentcolumn .innertube  {
@@ -97,9 +97,10 @@ em {
 }
 
 #rightcolumn {
+  background: none repeat scroll 0 0 transparent;
   float: left;
-  margin-left: -200px;
-  width: 200px;
+  margin-left: -190px;
+  width: 190px;
 }
 
 #rightcolumn .innertube {
@@ -122,6 +123,7 @@ em {
 
 .innertube {
   margin: 0 10px 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 p, div, span  {
@@ -161,7 +163,64 @@ ul  {
 /* Round corners */
 
 .round {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  border-radius:         10px;
+  -moz-border-radius:    5px;
+  -webkit-border-radius: 5px;
+  border-radius:         5px;
 }
+
+
+/* here we are looking toward our week bar style */
+
+
+ul li.headlink {
+    width:95px;
+    float:left;
+    margin-left: -1px;
+    background-color: #999900;
+    text-align:center;
+
+}
+
+
+ul.grouplink li a {
+    background-color: #012b70;
+    text-color: #cccccc;
+    color: white;
+}
+
+ul.grouplink li a:hover {
+    background-color: green;
+}
+
+ul.week li {
+  width: 100%;
+}
+
+ul.week li a:hover {
+    background-color: green;
+}
+
+ul.week li a {
+    background-color: #012b70;
+    text-color: #cccccc;
+    font-style: bold;
+    font-size: 14pt;
+    color: white;
+    text-align: center;
+    width: 100%;
+
+}
+/* that's the end of that */
+
+/*table stylez*/
+#left {
+    width:420px;
+    border:1px solid black;
+}
+
+#right {
+    width:420px;
+}
+
+
+
