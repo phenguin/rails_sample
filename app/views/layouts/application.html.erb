@@ -6,6 +6,9 @@
      <%= render 'layouts/stylesheets' %>
      <%= javascript_include_tag "application" %>
      <%= javascript_include_tag "customglobal" %>
+     <script type="text/javascript">
+       <%= yield :javascript %>
+     </script>
   <body>
      <div class="container">
        <%= render 'layouts/header' %>

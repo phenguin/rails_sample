@@ -5,7 +5,6 @@ SampleApp::Application.routes.draw do
   resources :subscriptions, :only => [:create, :destroy]
   resources :topics, :only => [:create, :show]
   resources :groups
-  resources :weeks, :only => [:show]
   resources :posts, :only => [:create, :destroy]
 
   root :to => 'pages#home'

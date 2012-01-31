@@ -1,3 +1,7 @@
+<% content_for :javascript do %>
+<%= render 'week_links.js' %>
+<% end %>
+
 <h1><%= "#{@group.name}" %></h1>
 
 <div id="group_nav">
@@ -9,16 +13,9 @@
 </div>
 
 <div id="group_week_nav">
-    <ul class="week">
-        <!-- 
-        if we want to use this we need to have these hashes in they are used as a js parameter
-        could probably inherit the design of the main nav bar --!>
-
-        <li><a class="round" href='#'>Week 1</a></li>
-        <li><a class="round" href='#'>Week 2</a></li>
-        <li><a class="round" href='#'>Week 3</a></li>
-        <li><a class="round" href='#'>Week 4</a></li>
-      </ul>
+  <ul class="week">
+    <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
+  </ul>
 </div>
 <div id="clear">
 </div>
@@ -29,7 +26,8 @@
         <p> LEFT</p>
     </div>
     <div id="right">
-        <p> RIGHT</p>
+      <% @week = @weeks.first %>
+      <%= render 'weeks/post_display' %>
     </div>
     <div id="clear">
        

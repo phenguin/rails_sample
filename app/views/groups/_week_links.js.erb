@@ -1,0 +1,16 @@
+$( function () {
+  var n = 1;
+  <% @weeks.each do |week| %>
+    n = <%= week.week_number %>;
+
+$("ul.week a.week"+n).bind("click", function () {
+
+  <% @week = week %>
+  <% @posts = week.posts %>
+  var post_display = $("<%= escape_javascript(render('weeks/post_display')) %>");
+  $("div#right").html(post_display);
+
+});
+  <% end %>
+
+});
