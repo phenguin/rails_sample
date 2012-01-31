@@ -6,6 +6,7 @@ namespace :db do
     make_topics
     make_articles
     make_groups
+    make_weeks
   end
 end
 
@@ -86,4 +87,11 @@ def make_groups
     u.group_join!(group2)
   end
 
+end
+
+def make_weeks
+  group = Group.first
+  [1,2,3,4].each do |n|
+    Week.create!(:group_id => group.id, :week_number => n)
+  end
 end

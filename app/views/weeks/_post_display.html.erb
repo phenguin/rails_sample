@@ -1,0 +1,15 @@
+<table class="discussion" summary="User Discussion">
+  <%= render @posts %>
+</table>
+<%= form_for current_user.posts.build(:week_id => @week.id), :remote => true do |f| %>
+  <div class="field">
+    <%= f.text_area :content %>
+  </div>
+   <div class="field">
+    <%= f.hidden_field :week_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
+

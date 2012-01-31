@@ -1,0 +1,7 @@
+var added_post = $("<%= escape_javascript(render @post) %>");
+var flash_success = $('<div class="flash success">Cool, bro.</div>');
+added_post.attr("hidden", true);
+$("table.discussion tr").last().after(added_post);
+added_post.show("slow");
+$("h2").after(flash_success);
+flash_success.fadeOut(5000);

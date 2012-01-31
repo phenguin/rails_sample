@@ -315,3 +315,34 @@ ul#navbar {
     float:left;
 }
 /* end of nav bar stylings */
+
+/*discussion table css*/
+ h1.post {
+  margin-bottom: 0.3em;
+}
+
+table.discussion {
+  margin-top: 1em;
+}
+
+table.discussion tr {
+  height: 70px;
+}
+
+table.discussion tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.discussion tr td.post {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.discussion tr td.post span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
