@@ -1,5 +1,5 @@
 <%= content_for :left do %>
-<% if @groups.empty? %>
+<% if @users_groups.empty? %>
   <b>You haven't joined any groups!</b>
 <% else %>
   <div class="header">
@@ -7,7 +7,7 @@
   </div>
   <div class="user_groups">
     <ul class="feed">
-      <%= render @groups %>
+      <%= render @users_groups %>
     </ul>
   </div>
 <% end %>

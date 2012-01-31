@@ -1,7 +1,8 @@
 class GroupsController < ApplicationController
   before_filter :authenticate, :only => [:create, :new, :destroy]
   before_filter :verify_admin, :only => [:destroy]
-  before_filter :init_user_lists, :only => [:new, :index]
+  before_filter :init_user_lists, :only => [:new, :index, :create]
+
 
   def show
     @group = Group.find(params[:id])
@@ -87,7 +88,7 @@ class GroupsController < ApplicationController
   def init_user_lists
     if signed_in?
       @articles = Article.unread_by(current_user).paginate(:page => params[:page])
-      @groups = current_user.groups
+      @users_groups = current_user.groups
     end
   end
 

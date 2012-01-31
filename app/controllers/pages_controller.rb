@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     if signed_in?
-      @groups = current_user.groups
+      @users_groups = current_user.groups
       @articles = Article.unread_by(current_user).paginate(:page => params[:page])
     end
   end
