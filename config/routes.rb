@@ -4,6 +4,7 @@ SampleApp::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :subscriptions, :only => [:create, :destroy]
   resources :topics, :only => [:create, :show]
+  resources :affiliations, :only => [:create,:destroy]
   resources :groups
   resources :posts, :only => [:create, :destroy]
 

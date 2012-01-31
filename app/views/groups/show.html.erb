@@ -10,6 +10,12 @@
   </div>
 <% end %>
 
+<% if current_user.group_member?(@group) %>
+  <%= render :partial => 'groups/leave' %>
+<% else %>
+  <%= render :partial => 'groups/join' %>
+<% end %>
+
 <div id="group_nav">
   <ul class="grouplink">
     <li><a href="#">Main</a></li>

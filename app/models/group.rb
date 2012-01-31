@@ -11,7 +11,11 @@ class Group < ActiveRecord::Base
   has_many :topics, :through => :group_topics
 
   def user_is_admin?(user)
-    affiliations.find_by_user_id(user.id).admin
+    if user.group_member?(self)
+      affiliations.find_by_user_id(user.id).admin
+    else
+      nil
+    end
   end
 
   def topic_add!(topic)
