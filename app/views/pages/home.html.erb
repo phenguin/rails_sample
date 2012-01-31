@@ -1,19 +1,5 @@
-
-<h3 align="center">Join a group --> learn together</h3>
-<h5 align="center">Conquer new material as part of a group weekly. Each topic is as simple to tackle as 1, 2, 3 (4 weeks).</h5>
-<!--
-<h3 align="center">to <b><i>thismonth.org</i></b> </h3>
---!>
-<h5 align="center"></h5>
-
-<p>
-Pick an area.. pick a topic.. and find other excited people to work through through some new materials. <b><i>thismonth.org</i></b> facillitates the type of organization and teamwork that leads to scientific discovery and human advancement.
-</p>
-<p>
-We have a responsibility to make use of our vast knowledge base and our ability to communicate with one another to identify goals and organie ourselves to achieve them.
-</p>
-
-
-<% if !signed_in? %>
-<%= link_to "Sign up now!",signup_path, :class => "signup_button round" %>
+<% if signed_in? %>
+  <%= render :partial => 'home_signed_in' %>
+<% else %>
+  <%= render :partial => 'home_new_user' %>
 <% end %>

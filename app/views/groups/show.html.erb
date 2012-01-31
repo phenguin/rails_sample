@@ -4,6 +4,12 @@
 
 <h1><%= "#{@group.name}" %></h1>
 
+<% if @group.user_is_admin?(current_user) %>
+  <div class="delete_group">
+    <%= link_to "Delete Group", @group, :method => :delete, :confirm => "Are you totally sure? This cannot be undone!", :title => "Delete #{@group.name}" %>
+  </div>
+<% end %>
+
 <div id="group_nav">
   <ul class="grouplink">
     <li><a href="#">Main</a></li>

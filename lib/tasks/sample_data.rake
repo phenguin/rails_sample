@@ -76,16 +76,28 @@ end
 
 def make_groups
   user = User.first
-  group1 = Group.create( :name => "Sociology Study Group", :creator_id => user.id )
-  group2 = Group.create( :name => "Cool Kids Learning Group", :creator_id => user.id )
+  group1 = Group.create( :name => "Sociology Study Group")
+  group2 = Group.create( :name => "Cool Kids Learning Group")
 
-  User.all[1..6].each do |u|
+  Topic.all[0..4].each do |topic|
+    group1.topic_add!(topic)
+  end
+
+  Topic.all[3..8].each do |topic|
+    group2.topic_add!(topic)
+  end
+
+  User.all[0..6].each do |u|
     u.group_join!(group1)
   end
+
+
 
   User.all[4..9].each do |u|
     u.group_join!(group2)
   end
+
+  User.all[0].group_join!(group2).toggle(:admin)
 
 end
 

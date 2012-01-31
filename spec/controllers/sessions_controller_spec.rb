@@ -50,9 +50,9 @@ describe SessionsController do
         controller.should be_signed_in
       end
 
-      it "shoud redirect to the user show page" do
+      it "shoud redirect to the root page" do
         post :create, :session => @attr
-        response.should redirect_to(user_path(@user))
+        response.should redirect_to(root_path)
       end
     end
 

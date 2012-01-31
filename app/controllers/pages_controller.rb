@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
+    if signed_in?
+      @groups = current_user.groups
+      #@articles = current_user.articles
+    end
   end
 
   def contact

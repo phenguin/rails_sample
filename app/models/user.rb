@@ -47,6 +47,7 @@ class User < ActiveRecord::Base
   end
 
   #methods for dealing with users / groups
+
   def group_join!(group)
     affiliations.create!( :group_id => group.id )
   end

@@ -1,4 +1,7 @@
-
+h1  {
+  font-weight: bold;
+  text-align: center;
+}
 .container {
   width: 950px;
 }

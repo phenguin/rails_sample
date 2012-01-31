@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddAdminToAffiliations	db/migrate/20120131053246_add_admin_to_affiliations.rb	/^class AddAdminToAffiliations < ActiveRecord::Migration$/;"	c
 AddAdminToUsers	db/migrate/20120123072429_add_admin_to_users.rb	/^class AddAdminToUsers < ActiveRecord::Migration$/;"	c
 AddEmailUniquenessIndex	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^class AddEmailUniquenessIndex < ActiveRecord::Migration$/;"	c
 AddPasswordToUsers	db/migrate/20120103203914_add_password_to_users.rb	/^class AddPasswordToUsers < ActiveRecord::Migration$/;"	c
@@ -17,6 +18,7 @@ ArticleTopics	app/models/article_topics.rb	/^class ArticleTopics < ActiveRecord:
 CreateAffiliations	db/migrate/20120130121135_create_affiliations.rb	/^class CreateAffiliations < ActiveRecord::Migration$/;"	c
 CreateArticleTopics	db/migrate/20120130104546_create_article_topics.rb	/^class CreateArticleTopics < ActiveRecord::Migration$/;"	c
 CreateArticles	db/migrate/20120130104445_create_articles.rb	/^class CreateArticles < ActiveRecord::Migration$/;"	c
+CreateGroupTopics	db/migrate/20120131051112_create_group_topics.rb	/^class CreateGroupTopics < ActiveRecord::Migration$/;"	c
 CreateGroups	db/migrate/20120130120907_create_groups.rb	/^class CreateGroups < ActiveRecord::Migration$/;"	c
 CreateMaterials	db/migrate/20120130215706_create_materials.rb	/^class CreateMaterials < ActiveRecord::Migration$/;"	c
 CreatePosts	db/migrate/20120130215932_create_posts.rb	/^class CreatePosts < ActiveRecord::Migration$/;"	c
@@ -26,6 +28,7 @@ CreateUserArticles	db/migrate/20120130105047_create_user_articles.rb	/^class Cre
 CreateUsers	db/migrate/20120103175402_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
 CreateWeeks	db/migrate/20120130215411_create_weeks.rb	/^class CreateWeeks < ActiveRecord::Migration$/;"	c
 Group	app/models/group.rb	/^class Group < ActiveRecord::Base$/;"	c
+GroupTopic	app/models/group_topic.rb	/^class GroupTopic < ActiveRecord::Base$/;"	c
 GroupsController	app/controllers/groups_controller.rb	/^class GroupsController < ApplicationController$/;"	c
 GroupsHelper	app/helpers/groups_helper.rb	/^module GroupsHelper$/;"	m
 Material	app/models/material.rb	/^class Material < ActiveRecord::Base$/;"	c
@@ -51,6 +54,7 @@ Week	app/models/week.rb	/^class Week < ActiveRecord::Base$/;"	c
 WeeksController	app/controllers/weeks_controller.rb	/^class WeeksController < ApplicationController$/;"	c
 WeeksHelper	app/helpers/weeks_helper.rb	/^module WeeksHelper$/;"	m
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
+admin?	app/models/group.rb	/^  def admin?(user)$/;"	f	class:Group
 admin_user	app/controllers/users_controller.rb	/^  def admin_user$/;"	f	class:UsersController
 authenticate	app/helpers/sessions_helper.rb	/^  def authenticate$/;"	f	class:SessionsHelper
 authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
@@ -69,6 +73,8 @@ change	db/migrate/20120130121135_create_affiliations.rb	/^  def change$/;"	f	cla
 change	db/migrate/20120130215411_create_weeks.rb	/^  def change$/;"	f	class:CreateWeeks
 change	db/migrate/20120130215706_create_materials.rb	/^  def change$/;"	f	class:CreateMaterials
 change	db/migrate/20120130215932_create_posts.rb	/^  def change$/;"	f	class:CreatePosts
+change	db/migrate/20120131051112_create_group_topics.rb	/^  def change$/;"	f	class:CreateGroupTopics
+change	db/migrate/20120131053246_add_admin_to_affiliations.rb	/^  def change$/;"	f	class:AddAdminToAffiliations
 clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	class:SessionsHelper
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
 correct_user	app/controllers/subscriptions_controller.rb	/^  def correct_user$/;"	f	class:SubscriptionsController
@@ -102,6 +108,7 @@ help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesControlle
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
 index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
 make_salt	app/models/user.rb	/^  def make_salt$/;"	f	class:User
+new	app/controllers/groups_controller.rb	/^  def new$/;"	f	class:GroupsController
 new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
@@ -119,6 +126,9 @@ subscribe!	app/models/user.rb	/^  def subscribe!(topic)$/;"	f	class:User
 subscribed?	app/models/user.rb	/^  def subscribed?(topic)$/;"	f	class:User
 test_sign_in	spec/spec_helper.rb	/^  def test_sign_in(user)$/;"	f
 title	app/helpers/application_helper.rb	/^  def title$/;"	f	class:ApplicationHelper
+topic_add!	app/models/group.rb	/^  def topic_add!(topic)$/;"	f	class:Group
+topic_member?	app/models/group.rb	/^  def topic_member?(topic)$/;"	f	class:Group
+topic_remove!	app/models/group.rb	/^  def topic_remove!(topic)$/;"	f	class:Group
 up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	class:AddEmailUniquenessIndex
 update	app/controllers/groups_controller.rb	/^  def update$/;"	f	class:GroupsController
 update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
