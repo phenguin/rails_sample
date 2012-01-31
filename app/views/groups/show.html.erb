@@ -22,17 +22,28 @@
 
 
 
-<div id="group_nav">
-  <ul class="grouplink">
-    <li><%= link_to 'Main', @group %></li>
-    <li><%= link_to "Members", members_group_path(@group) %></li>
-    <li><a href="#">Resources</a></li>
-  </ul>
-</div>
 
 
 
 <table class="split">
+  <tr>
+    <td>
+      <div id="group_nav">
+        <ul class="grouplink">
+          <li><%= link_to 'Main', @group %></li>
+          <li><%= link_to "Members", members_group_path(@group) %></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <div id="group_week_nav">
+        <ul class="week">
+          <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
+        </ul>
+      </div>
+    </td>
+  </tr>
   <tr>
     <td id="left">
       <h3 align="center"><u>Materials</u></h3>
@@ -44,16 +55,11 @@
         <li>a journal article on the topic</li>
         <li>some pundit's view on the matter</li>
       </ol>
-
-
     </td>
     <td id="right">
-      <div id="group_week_nav">
-        <ul class="week">
-          <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
-        </ul>
+      <div id="post_display">
+        <%= render 'weeks/post_display' %>
       </div>
-      <%= render 'weeks/post_display' %>
     </td>
   </tr>
 </table>
