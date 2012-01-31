@@ -194,6 +194,7 @@ h2 {
 ul li.headlink {
     width:95px;
     float:left;
+    padding:10px;
     margin-left: -1px;
     background-color: #999900;
     text-align:center;
@@ -211,6 +212,10 @@ ul.grouplink li a:hover {
     background-color: green;
 }
 
+ul.week {
+    text-align:center;
+}
+
 ul.week li {
   width: 100%;
 }
@@ -223,6 +228,7 @@ ul.week li a {
     background-color: #012b70;
     text-color: #cccccc;
     font-style: bold;
+    padding:3px;
     font-size: 14pt;
     color: white;
     text-align: center;
@@ -263,4 +269,3 @@ div.user_articles table.feed td.main  {
 div.user_articles table.feed td.mark  {
   width: 14%;
 }
-
