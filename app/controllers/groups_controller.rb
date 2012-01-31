@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
-  before_filter :authenticate, :only => [:create, :new]
+  before_filter :authenticate, :only => [:create, :new, :destroy]
+  before_filter :verify_admin, :only => [:destroy]
 
   def show
     @group = Group.find(params[:id])
@@ -40,7 +41,12 @@ class GroupsController < ApplicationController
       @errors = @group.errors.full_messages
       render 'new'
     end
+  end
 
+  def members
+    @group = Group.find(params[:id])
+    @title = "Members of #{@group.name}"
+    @users = @group.users
   end
 
   def new
@@ -68,6 +74,12 @@ class GroupsController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def verify_admin
+    redirect_to root_path unless user_is_admin?(current_user)
   end
 
 end

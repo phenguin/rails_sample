@@ -109,13 +109,16 @@ group_member?	app/models/user.rb	/^  def group_member?(group)$/;"	f	class:User
 has_password?	app/models/user.rb	/^  def has_password?(submitted)$/;"	f	class:User
 help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesController
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
+index	app/controllers/groups_controller.rb	/^  def index$/;"	f	class:GroupsController
 index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
 make_salt	app/models/user.rb	/^  def make_salt$/;"	f	class:User
+members	app/controllers/groups_controller.rb	/^  def members$/;"	f	class:GroupsController
 new	app/controllers/groups_controller.rb	/^  def new$/;"	f	class:GroupsController
 new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
 remember_token	app/helpers/sessions_helper.rb	/^  def remember_token$/;"	f	class:SessionsHelper
+search	app/models/group.rb	/^  def self.search(search, topics = nil)$/;"	F	class:Group
 secure_hash	app/models/user.rb	/^  def secure_hash(string)$/;"	f	class:User
 show	app/controllers/groups_controller.rb	/^  def show$/;"	f	class:GroupsController
 show	app/controllers/topics_controller.rb	/^  def show$/;"	f	class:TopicsController
@@ -137,4 +140,5 @@ update	app/controllers/groups_controller.rb	/^  def update$/;"	f	class:GroupsCon
 update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
 user_from_remember_token	app/helpers/sessions_helper.rb	/^  def user_from_remember_token$/;"	f	class:SessionsHelper
 user_is_admin?	app/models/group.rb	/^  def user_is_admin?(user)$/;"	f	class:Group
+verify_admin	app/controllers/groups_controller.rb	/^  def verify_admin$/;"	f	class:GroupsController
 week	app/controllers/pages_controller.rb	/^  def week$/;"	f	class:PagesController
