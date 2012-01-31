@@ -1,14 +1,10 @@
 require 'spec_helper'
 
-describe GroupsController do
-
-  before(:each) do
-    @group = Factory(:group)
-  end
+describe WeeksController do
 
   describe "GET 'show'" do
     it "returns http success" do
-      get 'show', :id => @group
+      get 'show'
       response.should be_success
     end
   end

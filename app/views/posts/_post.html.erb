@@ -1,0 +1,13 @@
+<tr>
+  <td class="gravatar">
+    <%= link_to gravatar_for(post.user), post.user %>
+  </td>
+  <td class="post">
+    <span class="content"><%= post.content %></span>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(post.created_at) %> ago
+      by <%= link_to post.user.name, post.user %>
+    </span>
+  </td>
+</tr>
+

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :subscriptions
   has_many :affiliations
   has_many :user_articles
+  has_many :posts
   has_many :subscribed_topics, :through => :subscriptions, :source => :topic
   has_many :bookmarks, :through => :subscriptions, :source => :article
   has_many :groups, :through => :affiliations

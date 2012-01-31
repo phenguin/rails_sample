@@ -14,7 +14,6 @@ group :production do
   gem 'pg'
 end
 
-
 gem 'json'
 
 group :development do
