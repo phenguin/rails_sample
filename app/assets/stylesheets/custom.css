@@ -246,6 +246,9 @@ li.headlink a {
     color: white;
 }
 
+li.headlink a:hover {
+    background-color:green;
+}
 li.headlink ul {
     position:absolute;
     display:none; 
@@ -345,10 +348,19 @@ ul.grouplink li a {
     color: white;
 }
 
+ul.grouplink li a:hover {
+    background-color: green;
+}
+
+
 #group_week_nav {
         width:320px;
         height:41px;
         float:right;
+}
+
+ul.week li a:hover {
+    background-color: green;
 }
 
 ul.week li a {
