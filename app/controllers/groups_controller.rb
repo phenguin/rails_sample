@@ -86,7 +86,7 @@ class GroupsController < ApplicationController
 
   def init_user_lists
     if signed_in?
-      @articles = current_user.bookmarks
+      @articles = Article.unread_by(current_user).paginate(:page => params[:page])
       @groups = current_user.groups
     end
   end

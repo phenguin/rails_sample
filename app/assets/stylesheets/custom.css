@@ -250,5 +250,17 @@ ul.week li a {
   max-height:60px !important;
 }
 
+/*user articles sidebar styling*/
 
+div.user_articles table.feed  {
+  table-layout: fixed;
+}
+
+div.user_articles table.feed td.main  {
+  width: 86%;
+}
+
+div.user_articles table.feed td.mark  {
+  width: 14%;
+}
 
