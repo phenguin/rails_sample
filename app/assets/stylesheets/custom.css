@@ -345,9 +345,15 @@ ul.grouplink li a {
     color: white;
 }
 
+#group_week_nav {
+        width:320px;
+        height:41px;
+        float:right;
+}
+
 ul.week li a {
-    float:right;
-    display: inline-block; 
+    float:left;
+    display: inline; 
     padding: 10px;
     background-color: #012b70;
     text-color: #cccccc;
