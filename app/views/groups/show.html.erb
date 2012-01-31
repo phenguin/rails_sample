@@ -4,21 +4,23 @@
 
 <div class="header">
   <h1><%= "#{@group.name}" %></h1>
-  <h3><b><%= "Week #{@week.week_number}" %></b></h3>
+  <% if @group.user_is_admin?(current_user) %>
+    <span class="delete_group">
+      <%= link_to "Delete Group", @group, :method => :delete, :confirm => "Are you totally sure? This cannot be undone!", :title => "Delete #{@group.name}" %>
+    </span>
+  <% end %>
+  <div>
+    <h3><b><%= "Week #{@week.week_number}" %></b></h3>
+  </div>
+  <% if current_user.group_member?(@group) %>
+    <%= render :partial => 'groups/leave' %>
+  <% else %>
+    <%= render :partial => 'groups/join' %>
+  <% end %>
+
 </div>
 
 
-<% if @group.user_is_admin?(current_user) %>
-  <div class="delete_group">
-    <%= link_to "Delete Group", @group, :method => :delete, :confirm => "Are you totally sure? This cannot be undone!", :title => "Delete #{@group.name}" %>
-  </div>
-<% end %>
-
-<% if current_user.group_member?(@group) %>
-  <%= render :partial => 'groups/leave' %>
-<% else %>
-  <%= render :partial => 'groups/join' %>
-<% end %>
 
 <div id="group_nav">
   <ul class="grouplink">
@@ -28,32 +30,33 @@
   </ul>
 </div>
 
-<div id="group_week_nav">
-  <ul class="week">
-    <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
-  </ul>
-</div>
-<div id="clear">
-</div>
-<br><br><br>
 
 
-<div id="left">
-  <h3 align="center"><u>Materials</u></h3>
-  <br>
-  <ol>
-    <li>article1</li>
-    <li>worthwhile quotes</li>
-    <li>some pics</li>
-    <li>a journal article on the topic</li>
-    <li>some pundit's view on the matter</li>
-  </ol>
+<table class="split">
+  <tr>
+    <td id="left">
+      <h3 align="center"><u>Materials</u></h3>
+      <br>
+      <ol>
+        <li>article1</li>
+        <li>worthwhile quotes</li>
+        <li>some pics</li>
+        <li>a journal article on the topic</li>
+        <li>some pundit's view on the matter</li>
+      </ol>
 
 
-</div>
-<div id="right">
-  <%= render 'weeks/post_display' %>
-</div>
+    </td>
+    <td id="right">
+      <div id="group_week_nav">
+        <ul class="week">
+          <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
+        </ul>
+      </div>
+      <%= render 'weeks/post_display' %>
+    </td>
+  </tr>
+</table>
 <div id="clear">
 
 </div>

@@ -358,9 +358,14 @@ ul.grouplink li a:hover {
 
 
 #group_week_nav {
-        width:330px;
-        height:41px;
-        float:right;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+#group_week_nav ul {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 ul.week li a:hover {
@@ -401,10 +406,6 @@ ul.week li a {
 #group_nav {
 }
 
-#group_week_nav {
-}
-
-
 /*discussion table css*/
  h1.post {
   margin-bottom: 0.3em;
@@ -437,12 +438,12 @@ table.discussion tr td.post span.timestamp {
   color: #666;
 }
 
-div#right  {
+#right  {
   padding : 20px;
   position : relative;
 }
 
-div#right textarea#post_content {
+#right textarea#post_content {
   width:400px !important;
   min-width:400px !important;
   max-width:400px !important;
@@ -451,7 +452,7 @@ div#right textarea#post_content {
   max-height:60px !important;
 }
 
-/*div#right div.flash.success  {*/
+/*#right div.flash.success  {*/
   /*width : 300px;*/
 /*}*/
 

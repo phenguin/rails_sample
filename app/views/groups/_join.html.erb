@@ -1,7 +1,7 @@
 <% @user ||= current_user %>
-<div class="join_group">
+<span class="join_group">
   <%= form_for @user.affiliations.build(:group_id => @group.id) do |f| %>
     <div><%= f.hidden_field :group_id %></div>
     <div class="actions"><%= f.submit "Join this group!" %></div>
   <% end %>
-</div>
+</span>
