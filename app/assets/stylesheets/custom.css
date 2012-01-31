@@ -29,17 +29,17 @@ section h1 {
 /* Links */
 
 a {
-  color: #003300;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
-  color: #003300;
+  color: black;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #003300;
+  color: black;
 }
 
 /* Navigation */
@@ -71,7 +71,7 @@ nav ul li a  {
 }
 
 nav ul li a:visited  {
-  color: #003300;
+  color: black;
 }
 
 nav ul li a:hover  {
@@ -285,9 +285,11 @@ ul {
     text-color: #cccccc;
 }
 
-ul#navbar {
+ul.navbar {
+    width:930px;
     position:relative;
     float:left;
+    background-color: #012b70;
 }
 /* end of nav bar stylings */
 

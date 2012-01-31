@@ -1,6 +1,12 @@
 <header>
 
-<ul id="navbar">
+<ul class="navbar">
+    <li class="headlink">
+    <a href=""><b><i>TOPICS:</i></b></a>
+    </li>
+
+    
+    
     <li class="headlink">
         <a href="">Mathematics</a>
         <ul>
@@ -13,7 +19,7 @@
         <a href="">Science</a>
         <ul>
             <li><a href="">biology</a></li>
-            <li><a href="">chemistry</a></li>
+            <li><a href="">food</a></li>
             <li><a href="">physics</a></li>
         </ul>
     </li>
@@ -22,29 +28,29 @@
     <a href="">Sociology</a>
     <ul>
         <li><a href="">people</a></li>
-        <li><a href="">milestones</a></li>
+        <li><a href="">group dynamics</a></li>
         <li><a href="">dreams</a></li>
     </ul>
     </li>
 
     <li class="headlink">
-    <a href="">AreaFour</a>
+    <a href="">Engineering</a>
     <ul>
-        <li><a href="">topic1</a></li>
-        <li><a href="">topic2</a></li>
-        <li><a href="">topic3</a></li>
-        <li><a href="">topic4</a></li>
-        <li><a href="">topic5</a></li>
+        <li><a href="">energy</a></li>
+        <li><a href="">heating</a></li>
+        <li><a href="">buildings</a></li>
+        <li><a href="">control</a></li>
+        <li><a href="">transportation</a></li>
     </ul>
     </li>
     <li class="headlink">
-    <a href="">AreaFive</a>
+    <a href="">Reading</a>
     <ul>
-        <li><a href="">topic1</a></li>
-        <li><a href="">topic2</a></li>
-        <li><a href="">topic3</a></li>
-        <li><a href="">topic4</a></li>
-        <li><a href="">topic5</a></li>
+        <li><a href="">Walden</a></li>
+        <li><a href="">Gatsby</a></li>
+        <li><a href="">TheGambler</a></li>
+        <li><a href="">OscarWao</a></li>
+        <li><a href="">Quixote</a></li>
     </ul>
 </li>
 
@@ -60,7 +66,6 @@
   <li><%= link_to "Home", root_path %></li>
   <li><%= link_to "Help", help_path %></li>
   <% if signed_in? %>
-    <li><%= link_to "Week", week_path %></li>
     <li><%= link_to "Settings", edit_user_path(@current_user) %></li>
     <li><%= link_to "Users", users_path %></li>
     <li><%= link_to "Profile", user_path(@current_user) %></li>
