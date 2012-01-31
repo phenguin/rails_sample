@@ -18,6 +18,9 @@ gem 'json'
 
 group :development do
   gem 'rspec-rails'
+end
+
+group :development, :production do
   gem 'faker', '0.3.1'
 end
 
