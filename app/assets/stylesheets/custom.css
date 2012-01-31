@@ -220,7 +220,6 @@ ul.topics a.unsubscribe {
   right : 5px;
 }
 
-
 /*                                   */
 /* this is for the nav barrrrrrr!!!! */
 /*                                   */
@@ -242,6 +241,32 @@ li.headlink a {
     background-color: #012b70;
     text-color: #cccccc;
     color: white;
+}
+
+li.headlink ul {
+    position:absolute;
+    display:none; 
+    text-align:left;
+    
+}
+
+li.headlink.hover ul {
+    display: block; 
+}
+
+li.headlink ul li a {
+    padding: 7px;
+    height: 22px;
+}
+
+/*rollover color*/
+li.headlink ul li a:hover {
+    background-color: green;
+}
+
+
+ul li a:hover {
+    text-decoration:none;
 }
 
 li.headlink ul {
@@ -292,7 +317,6 @@ ul.navbar {
     background-color: #012b70;
 }
 /* end of nav bar stylings */
-
 
 
 /* here we are looking toward our week bar style */
@@ -357,3 +381,33 @@ ul.week li a {
 }
 
 
+/*discussion table css*/
+ h1.post {
+  margin-bottom: 0.3em;
+}
+
+table.discussion {
+  margin-top: 1em;
+}
+
+table.discussion tr {
+  height: 70px;
+}
+
+table.discussion tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.discussion tr td.post {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.discussion tr td.post span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}

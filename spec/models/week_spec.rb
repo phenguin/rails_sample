@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe "groups/create.html.erb" do
+describe Week do
   pending "add some examples to (or delete) #{__FILE__}"
 end

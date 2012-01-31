@@ -1,19 +1,12 @@
 SampleApp::Application.routes.draw do
-  get "groups/show"
-
-  get "groups/create"
-
-  get "groups/destroy"
-
-  get "groups/edit"
-
-  get "groups/update"
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :subscriptions, :only => [:create, :destroy]
   resources :topics, :only => [:create, :show]
   resources :groups
+  resources :weeks, :only => [:show]
+  resources :posts, :only => [:create, :destroy]
 
   root :to => 'pages#home'
   match '/help', :to => 'pages#help'
