@@ -9,7 +9,6 @@ gem 'will_paginate', '3.0.2'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'ruby-debug'
 end
 group :production do
   gem 'pg'
