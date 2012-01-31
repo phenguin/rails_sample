@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 
-  has_many :subscriptions
-  has_many :affiliations
-  has_many :user_articles
-  has_many :posts
+  has_many :subscriptions, :dependent => :destroy
+  has_many :affiliations, :dependent => :destroy
+  has_many :user_articles, :dependent => :destroy
+  has_many :posts, :dependent => :destroy
   has_many :subscribed_topics, :through => :subscriptions, :source => :topic
   has_many :bookmarks, :through => :user_articles, :source => :article
   has_many :groups, :through => :affiliations
