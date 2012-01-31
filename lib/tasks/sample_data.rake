@@ -51,21 +51,9 @@ def make_topics
 end
 
 def make_articles
-  links = ['http://www.google.com',
-    'http://facebook.com',
-    'http://www.washingtonpost.com/national/gingrich-delivers-on-wild-and-wooly-vow/2012/01/29/gIQA0sUAbQ_story.html',
-    'http://lindsaar.net/2010/5/9/Getting-Rails-3-Edge-with-jQuery-RSpec-and-Cucumber-using-RVM',
-    'http://www.rubyfocus.biz/blog/2011/06/15/access_control_101_in_rails_and_the_citibank-hack.html   ',
-    'http://www.linuxstall.com/linux-command-line-tips-that-every-linux-user-should-know/',
-    'http://mirnazim.org/writings/vim-plugins-i-use/']
+  links = ['http://www.google.com', 'http://facebook.com', 'http://www.washingtonpost.com/national/gingrich-delivers-on-wild-and-wooly-vow/2012/01/29/gIQA0sUAbQ_story.html', 'http://lindsaar.net/2010/5/9/Getting-Rails-3-Edge-with-jQuery-RSpec-and-Cucumber-using-RVM', 'http://www.rubyfocus.biz/blog/2011/06/15/access_control_101_in_rails_and_the_citibank-hack.html   ', 'http://www.linuxstall.com/linux-command-line-tips-that-every-linux-user-should-know/', 'http://mirnazim.org/writings/vim-plugins-i-use/']
 
-  titles = ['Whoa its google!',
-    'Facebook.. how cool',
-    'Gingrich delivers on wild and wooly vow - Washington Post',
-    'Getting Rails 3 Edge with jQuery, RSpec, and Cucumber using RVM',
-    'Access Control 101 in rails and the citibank hack',
-    'Linux command line tips that every linux user should know',
-    'Vim plugins I use']
+  titles = ['Whoa its google!', 'Facebook.. how cool', 'Gingrich delivers on wild and wooly vow - Washington Post', 'Getting Rails 3 Edge with jQuery, RSpec, and Cucumber using RVM', 'Access Control 101 in rails and the citibank hack', 'Linux command line tips that every linux user should know', 'Vim plugins I use']
 
   [1..links.length].each do |n|
     article = Article.create( :link => links[n], :title => titles[n] )
@@ -89,8 +77,6 @@ def make_groups
   User.all[0..6].each do |u|
     u.group_join!(group1)
   end
-
-
 
   User.all[4..9].each do |u|
     u.group_join!(group2)
