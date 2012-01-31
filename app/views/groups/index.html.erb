@@ -1,0 +1,15 @@
+<h1>Groups:</h1>
+
+<%= form_tag groups_path, :method => 'get', :remote => true  do %>
+  <p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= select_tag :topics, options_from_collection_for_select(@topics, "id", "name"), :multiple => true %>
+  <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<div class="group_index_list">
+  <ul>
+    <%= render @groups %>
+  </ul>
+</div>

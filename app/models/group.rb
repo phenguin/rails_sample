@@ -4,6 +4,10 @@ class Group < ActiveRecord::Base
 
   validates :name, :presence => true
 
+  scope :having_topic_in, (lambda do |topics|
+    joins(:group_topics).where(:group_topics => {:topic_id => topics})
+  end)
+
   has_many :affiliations
   has_many :group_topics
   has_many :weeks
@@ -20,6 +24,20 @@ class Group < ActiveRecord::Base
 
   def topic_add!(topic)
     group_topics.create!(:topic_id => topic.id )
+  end
+
+  def self.search(search, topics = nil)
+    unless topics.nil? || topics.empty?
+      dataset = having_topic_in(topics)
+    else
+      dataset = self
+    end
+
+    if search
+      dataset.where('name LIKE ?',  "%#{search}%")
+    else
+      dataset.find(:all)
+    end
   end
 
   def topic_remove!(topic)
