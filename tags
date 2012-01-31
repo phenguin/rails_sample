@@ -8,6 +8,7 @@ AddAdminToAffiliations	db/migrate/20120131053246_add_admin_to_affiliations.rb	/^
 AddAdminToUsers	db/migrate/20120123072429_add_admin_to_users.rb	/^class AddAdminToUsers < ActiveRecord::Migration$/;"	c
 AddEmailUniquenessIndex	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^class AddEmailUniquenessIndex < ActiveRecord::Migration$/;"	c
 AddPasswordToUsers	db/migrate/20120103203914_add_password_to_users.rb	/^class AddPasswordToUsers < ActiveRecord::Migration$/;"	c
+AddReadDateToUserArticles	db/migrate/20120131173213_add_read_date_to_user_articles.rb	/^class AddReadDateToUserArticles < ActiveRecord::Migration$/;"	c
 AddSaltToUsers	db/migrate/20120103210849_add_salt_to_users.rb	/^class AddSaltToUsers < ActiveRecord::Migration$/;"	c
 Affiliation	app/models/affiliation.rb	/^class Affiliation < ActiveRecord::Base$/;"	c
 AffiliationsController	app/controllers/affiliations_controller.rb	/^class AffiliationsController < ApplicationController$/;"	c
@@ -17,6 +18,8 @@ ApplicationController	app/controllers/application_controller.rb	/^class Applicat
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 Article	app/models/article.rb	/^class Article < ActiveRecord::Base$/;"	c
 ArticleTopics	app/models/article_topics.rb	/^class ArticleTopics < ActiveRecord::Base$/;"	c
+ArticleTopicsController	app/controllers/article_topics_controller.rb	/^class ArticleTopicsController < ApplicationController$/;"	c
+ArticleTopicsHelper	app/helpers/article_topics_helper.rb	/^module ArticleTopicsHelper$/;"	m
 CreateAffiliations	db/migrate/20120130121135_create_affiliations.rb	/^class CreateAffiliations < ActiveRecord::Migration$/;"	c
 CreateArticleTopics	db/migrate/20120130104546_create_article_topics.rb	/^class CreateArticleTopics < ActiveRecord::Migration$/;"	c
 CreateArticles	db/migrate/20120130104445_create_articles.rb	/^class CreateArticles < ActiveRecord::Migration$/;"	c
@@ -50,6 +53,8 @@ TopicsController	app/controllers/topics_controller.rb	/^class TopicsController <
 TopicsHelper	app/helpers/topics_helper.rb	/^module TopicsHelper$/;"	m
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserArticle	app/models/user_article.rb	/^class UserArticle < ActiveRecord::Base$/;"	c
+UserArticlesController	app/controllers/user_articles_controller.rb	/^class UserArticlesController < ApplicationController$/;"	c
+UserArticlesHelper	app/helpers/user_articles_helper.rb	/^module UserArticlesHelper$/;"	m
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 Week	app/models/week.rb	/^class Week < ActiveRecord::Base$/;"	c
@@ -60,6 +65,9 @@ admin_user	app/controllers/users_controller.rb	/^  def admin_user$/;"	f	class:Us
 authenticate	app/helpers/sessions_helper.rb	/^  def authenticate$/;"	f	class:SessionsHelper
 authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
 authenticate_with_salt	app/models/user.rb	/^  def self.authenticate_with_salt(id, cookie_salt)$/;"	F	class:User
+bookmark	app/controllers/user_articles_controller.rb	/^  def bookmark$/;"	f	class:UserArticlesController
+bookmark!	app/models/user.rb	/^  def bookmark!(article)$/;"	f	class:User
+bookmarked?	app/models/user.rb	/^  def bookmarked?(article)$/;"	f	class:User
 change	db/migrate/20120103175402_create_users.rb	/^  def change$/;"	f	class:CreateUsers
 change	db/migrate/20120103203914_add_password_to_users.rb	/^  def change$/;"	f	class:AddPasswordToUsers
 change	db/migrate/20120103210849_add_salt_to_users.rb	/^  def change$/;"	f	class:AddSaltToUsers
@@ -76,6 +84,7 @@ change	db/migrate/20120130215706_create_materials.rb	/^  def change$/;"	f	class:
 change	db/migrate/20120130215932_create_posts.rb	/^  def change$/;"	f	class:CreatePosts
 change	db/migrate/20120131051112_create_group_topics.rb	/^  def change$/;"	f	class:CreateGroupTopics
 change	db/migrate/20120131053246_add_admin_to_affiliations.rb	/^  def change$/;"	f	class:AddAdminToAffiliations
+change	db/migrate/20120131173213_add_read_date_to_user_articles.rb	/^  def change$/;"	f	class:AddReadDateToUserArticles
 clear_return_to	app/helpers/sessions_helper.rb	/^  def clear_return_to$/;"	f	class:SessionsHelper
 contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesController
 correct_user	app/controllers/subscriptions_controller.rb	/^  def correct_user$/;"	f	class:SubscriptionsController
@@ -111,7 +120,11 @@ help	app/controllers/pages_controller.rb	/^  def help$/;"	f	class:PagesControlle
 home	app/controllers/pages_controller.rb	/^  def home$/;"	f	class:PagesController
 index	app/controllers/groups_controller.rb	/^  def index$/;"	f	class:GroupsController
 index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+init_lists	app/controllers/users_controller.rb	/^  def init_lists$/;"	f	class:UsersController
+init_user_lists	app/controllers/groups_controller.rb	/^  def init_user_lists$/;"	f	class:GroupsController
 make_salt	app/models/user.rb	/^  def make_salt$/;"	f	class:User
+mark_read	app/controllers/user_articles_controller.rb	/^  def mark_read$/;"	f	class:UserArticlesController
+mark_read!	app/models/user.rb	/^  def mark_read!(article)$/;"	f	class:User
 members	app/controllers/groups_controller.rb	/^  def members$/;"	f	class:GroupsController
 new	app/controllers/groups_controller.rb	/^  def new$/;"	f	class:GroupsController
 new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController

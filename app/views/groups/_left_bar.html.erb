@@ -1,0 +1,19 @@
+<%= content_for :left do %>
+  <% if @group.user_is_admin?(current_user) %>
+    <span class="delete_group">
+      <%= link_to "Delete Group", @group, :method => :delete, :confirm => "Are you totally sure? This cannot be undone!", :title => "Delete #{@group.name}" %>
+    </span>
+  <% end %>
+  <% if current_user.group_member?(@group) %>
+    <%= render :partial => 'groups/leave' %>
+  <% else %>
+    <%= render :partial => 'groups/join' %>
+  <% end %>
+  <div id="group_nav">
+    <ul class="grouplink">
+      <li><%= link_to 'Main', @group %></li>
+      <li><%= link_to "Members", members_group_path(@group) %></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+  </div>
+<% end %>

@@ -10,8 +10,11 @@ $("ul.week a.week"+n).bind("click", function () {
   $("section div.header h3 b").html("<%= escape_javascript("Week #{@week.week_number}") %>");
   var post_display = $("<%= escape_javascript(render('weeks/post_display')) %>");
   $("td div#post_display").html(post_display);
+  $("ul.week a").css("background-color","#012b70");
+  $("a.week"+<%= @week.week_number %>).css("background-color","green");
 
 });
   <% end %>
+  $("ul.week a.week1").click();
 
 });

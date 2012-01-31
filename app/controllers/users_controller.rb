@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user, :only => [:destroy]
+  before_filter :init_lists
 
   def new
     @user = User.new
@@ -71,6 +72,13 @@ class UsersController < ApplicationController
 
   def admin_user
     redirect_to(root_path) unless signed_in? && current_user.admin?
+  end
+
+  def init_lists
+    if signed_in?
+      @groups = current_user.groups
+      @articles = current_user.bookmarks
+    end
   end
 
 end

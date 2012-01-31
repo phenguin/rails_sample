@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   before_filter :authenticate, :only => [:create, :new, :destroy]
   before_filter :verify_admin, :only => [:destroy]
+  before_filter :init_user_lists, :only => [:new, :index]
 
   def show
     @group = Group.find(params[:id])
@@ -81,6 +82,13 @@ class GroupsController < ApplicationController
   def verify_admin
     @group = Group.find(params[:id])
     redirect_to root_path unless @group.user_is_admin?(current_user)
+  end
+
+  def init_user_lists
+    if signed_in?
+      @articles = current_user.bookmarks
+      @groups = current_user.groups
+    end
   end
 
 end

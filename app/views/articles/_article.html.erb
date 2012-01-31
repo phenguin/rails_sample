@@ -1,0 +1,12 @@
+<%= content_for :javascript do %>
+  <%= render 'article.js' %>
+<% end %>
+
+<tr class="feedItem">
+  <td class="main">
+  <%= link_to article.title, article.link %>
+  </td>
+   <td class="mark">
+     <%= link_to "R", mark_read_user_article_path(:id => article.id), :remote => true, :method => :put %>
+  </td>
+</tr>

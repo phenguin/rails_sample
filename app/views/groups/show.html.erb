@@ -4,48 +4,12 @@
 
 <div class="header">
   <h1><%= "#{@group.name}" %></h1>
-  <% if @group.user_is_admin?(current_user) %>
-    <span class="delete_group">
-      <%= link_to "Delete Group", @group, :method => :delete, :confirm => "Are you totally sure? This cannot be undone!", :title => "Delete #{@group.name}" %>
-    </span>
-  <% end %>
-  <div>
-    <h3><b><%= "Week #{@week.week_number}" %></b></h3>
-  </div>
-  <% if current_user.group_member?(@group) %>
-    <%= render :partial => 'groups/leave' %>
-  <% else %>
-    <%= render :partial => 'groups/join' %>
-  <% end %>
-
 </div>
 
 
-
-
-
-
-<table class="split">
+<table border="0" cellspacing="0" cellpadding="0" class="split">
   <tr>
-    <td>
-      <div id="group_nav">
-        <ul class="grouplink">
-          <li><%= link_to 'Main', @group %></li>
-          <li><%= link_to "Members", members_group_path(@group) %></li>
-          <li><a href="#">Resources</a></li>
-        </ul>
-      </div>
-    </td>
-    <td>
-      <div id="group_week_nav">
-        <ul class="week">
-          <%= render :partial => 'week_links', :collection => @weeks, :as => :week %>
-        </ul>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td id="left">
+    <td valign="top" id="left">
       <h3 align="center"><u>Materials</u></h3>
       <br>
       <ol>
@@ -56,13 +20,13 @@
         <li>some pundit's view on the matter</li>
       </ol>
     </td>
-    <td id="right">
+    <td valign="top" id="right">
       <div id="post_display">
         <%= render 'weeks/post_display' %>
       </div>
     </td>
   </tr>
 </table>
-<div id="clear">
 
-</div>
+<%= render :partial => 'groups/right_bar' %>
+<%= render :partial => 'groups/left_bar' %>

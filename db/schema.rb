@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131053246) do
+ActiveRecord::Schema.define(:version => 20120131173213) do
 
   create_table "affiliations", :force => true do |t|
     t.integer  "user_id"
@@ -62,6 +62,15 @@ ActiveRecord::Schema.define(:version => 20120131053246) do
 
   add_index "materials", ["week_id"], :name => "index_materials_on_week_id"
 
+  create_table "microposts", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
+
   create_table "posts", :force => true do |t|
     t.integer  "user_id"
     t.integer  "week_id"
@@ -72,6 +81,17 @@ ActiveRecord::Schema.define(:version => 20120131053246) do
 
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
   add_index "posts", ["week_id"], :name => "index_posts_on_week_id"
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
+  add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
+  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
@@ -94,7 +114,10 @@ ActiveRecord::Schema.define(:version => 20120131053246) do
     t.integer  "article_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "read_date"
   end
+
+  add_index "user_articles", ["read_date"], :name => "index_user_articles_on_read_date"
 
   create_table "users", :force => true do |t|
     t.string   "name"
