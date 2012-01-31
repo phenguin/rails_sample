@@ -53,6 +53,17 @@ class GroupsController < ApplicationController
     redirect_to root_path
   end
 
+  def index
+    @topics = Topic.all :order => "name ASC"
+    @search_topics = params[:topics].nil? ? [] : params[:topics]
+    logger.debug params[:topics]
+    @groups = Group.search(params[:search], params[:topics] )
+    respond_to do |format|
+      format.html {}
+      format.js
+    end
+  end
+
   def edit
   end
 
