@@ -290,3 +290,68 @@ ul#navbar {
     float:left;
 }
 /* end of nav bar stylings */
+
+
+
+/* here we are looking toward our week bar style */
+
+
+ul li.headlink {
+    display:inline-block;
+    width:95px;
+    float:left;
+    margin-left: -1px;
+    background-color: #999900;
+    text-align:center;
+
+}
+
+
+ul.grouplink li a {
+    float:left;
+    display: inline-block; 
+    padding: 10px;
+    background-color: #012b70;
+    text-color: #cccccc;
+    color: white;
+}
+
+ul.week li a {
+    float:right;
+    display: inline-block; 
+    padding: 10px;
+    background-color: #012b70;
+    text-color: #cccccc;
+    color: white;
+
+}
+/* that's the end of that */
+
+/* div for group */
+#clear {
+    clear:both;
+}
+
+#left {
+    float:left;
+    width:420px;
+    border:5px solid black;
+
+}
+
+#right {
+    float:right;
+    width:420px;
+    border:5px solid black;
+
+}
+
+
+
+#group_nav {
+}
+
+#group_week_nav {
+}
+
+
