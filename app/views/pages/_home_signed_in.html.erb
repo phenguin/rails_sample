@@ -1,11 +1,14 @@
 <h1><%= "Hi #{current_user.name}! Welcome to ThisMonth" %></h1>
 
+<%= content_for :left do %>
 <% if @groups.empty? %>
   <b>You haven't joined any groups!</b>
 <% else %>
-  <b>Your groups:</b>
+  <div class="header">
+    <h2>Your groups:</h2>
+  </div>
   <div class="user_groups">
-    <ul>
+    <ul class="feed">
       <%= render @groups %>
       <li>
       <%= link_to "Create a new group,", new_group_path %>
@@ -13,4 +16,5 @@
       </li>
     </ul>
   </div>
+<% end %>
 <% end %>

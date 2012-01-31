@@ -1,78 +1,26 @@
 <header>
-
-<ul class="navbar">
-    <li class="headlink">
-    <a href=""><b><i>TOPICS:</i></b></a>
-    </li>
-
-    
-    
-    <li class="headlink">
-        <a href="">Mathematics</a>
-        <ul>
-            <li><a href="">optimization</a></li>
-            <li><a href="">shapes</a></li>
-            <li><a href="">poker</a></li>
-        </ul>
-    </li>
-    <li class="headlink">
-        <a href="">Science</a>
-        <ul>
-            <li><a href="">biology</a></li>
-            <li><a href="">food</a></li>
-            <li><a href="">physics</a></li>
-        </ul>
-    </li>
-
-    <li class="headlink">
-    <a href="">Sociology</a>
+<div id="navsection">
+  <div class="innertube round">
+    <nav>
     <ul>
-        <li><a href="">people</a></li>
-        <li><a href="">group dynamics</a></li>
-        <li><a href="">dreams</a></li>
+      <div class="usernav">
+        <% if signed_in? %>
+          <li><%= link_to "Settings", edit_user_path(@current_user) %></li>
+          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to "Profile", user_path(@current_user) %></li>
+          <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+        <% else %>
+          <li><%= link_to "Log in", signin_path %></li>
+          <li><%= link_to "Sign up!", signup_path %></li>
+        <% end %>
+      </div>
     </ul>
-    </li>
-
-    <li class="headlink">
-    <a href="">Engineering</a>
-    <ul>
-        <li><a href="">energy</a></li>
-        <li><a href="">heating</a></li>
-        <li><a href="">buildings</a></li>
-        <li><a href="">control</a></li>
-        <li><a href="">transportation</a></li>
-    </ul>
-    </li>
-    <li class="headlink">
-    <a href="">Reading</a>
-    <ul>
-        <li><a href="">Walden</a></li>
-        <li><a href="">Gatsby</a></li>
-        <li><a href="">TheGambler</a></li>
-        <li><a href="">OscarWao</a></li>
-        <li><a href="">Quixote</a></li>
-    </ul>
-</li>
-
-    
-</ul>
-
-
-<% logo = image_tag("logo.png", :alt => "Group-Organize", :class => "round") %>
-<%= link_to logo, root_path, :id => 'logo' %>
-
-<nav class="round">
-<ul>
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Help", help_path %></li>
-  <% if signed_in? %>
-    <li><%= link_to "Settings", edit_user_path(@current_user) %></li>
-    <li><%= link_to "Users", users_path %></li>
-    <li><%= link_to "Profile", user_path(@current_user) %></li>
-    <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-  <% else %>
-    <li><%= link_to "Sign in", signin_path %></li>
-  <% end %>
-</ul>
-</nav>
+    </nav>
+  </div>
+</div>
+<div id="topsection">
+  <div class="innertube">
+    <% logo = image_tag("logo.png", :alt => "Group-Organize", :class => "round") %>
+  </div>
+</div>
 </header>
