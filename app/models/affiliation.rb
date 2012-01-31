@@ -1,4 +1,6 @@
 class Affiliation < ActiveRecord::Base
+  attr_accessible :group_id
+
   belongs_to :user
   belongs_to :group
 

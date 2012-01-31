@@ -1,0 +1,6 @@
+<% @user ||= current_user %>
+<% unless @group.user_is_admin?(@user) %>
+  <%= form_for @user.affiliations.find_by_group_id(@group.id), :html => { :method => :delete } do |f| %>
+    <div class="actions"><%= f.submit "Leave this group" %></div>
+  <% end %>
+<% end %>

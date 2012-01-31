@@ -10,6 +10,8 @@ AddEmailUniquenessIndex	db/migrate/20120103191718_add_email_uniqueness_index.rb	
 AddPasswordToUsers	db/migrate/20120103203914_add_password_to_users.rb	/^class AddPasswordToUsers < ActiveRecord::Migration$/;"	c
 AddSaltToUsers	db/migrate/20120103210849_add_salt_to_users.rb	/^class AddSaltToUsers < ActiveRecord::Migration$/;"	c
 Affiliation	app/models/affiliation.rb	/^class Affiliation < ActiveRecord::Base$/;"	c
+AffiliationsController	app/controllers/affiliations_controller.rb	/^class AffiliationsController < ApplicationController$/;"	c
+AffiliationsHelper	app/helpers/affiliations_helper.rb	/^module AffiliationsHelper$/;"	m
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:SampleApp
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
@@ -54,7 +56,6 @@ Week	app/models/week.rb	/^class Week < ActiveRecord::Base$/;"	c
 WeeksController	app/controllers/weeks_controller.rb	/^class WeeksController < ApplicationController$/;"	c
 WeeksHelper	app/helpers/weeks_helper.rb	/^module WeeksHelper$/;"	m
 about	app/controllers/pages_controller.rb	/^  def about$/;"	f	class:PagesController
-admin?	app/models/group.rb	/^  def admin?(user)$/;"	f	class:Group
 admin_user	app/controllers/users_controller.rb	/^  def admin_user$/;"	f	class:UsersController
 authenticate	app/helpers/sessions_helper.rb	/^  def authenticate$/;"	f	class:SessionsHelper
 authenticate	app/models/user.rb	/^  def self.authenticate(email,submitted_password)$/;"	F	class:User
@@ -80,6 +81,7 @@ contact	app/controllers/pages_controller.rb	/^  def contact$/;"	f	class:PagesCon
 correct_user	app/controllers/subscriptions_controller.rb	/^  def correct_user$/;"	f	class:SubscriptionsController
 correct_user	app/controllers/users_controller.rb	/^  def correct_user$/;"	f	class:UsersController
 correct_user	app/helpers/sessions_helper.rb	/^  def correct_user$/;"	f	class:SessionsHelper
+create	app/controllers/affiliations_controller.rb	/^  def create$/;"	f	class:AffiliationsController
 create	app/controllers/groups_controller.rb	/^  def create$/;"	f	class:GroupsController
 create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
 create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
@@ -89,6 +91,7 @@ current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:Ses
 current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
 current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
 deny_access	app/helpers/sessions_helper.rb	/^  def deny_access$/;"	f	class:SessionsHelper
+destroy	app/controllers/affiliations_controller.rb	/^  def destroy$/;"	f	class:AffiliationsController
 destroy	app/controllers/groups_controller.rb	/^  def destroy$/;"	f	class:GroupsController
 destroy	app/controllers/posts_controller.rb	/^  def destroy$/;"	f	class:PostsController
 destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
@@ -133,4 +136,5 @@ up	db/migrate/20120103191718_add_email_uniqueness_index.rb	/^  def up$/;"	f	clas
 update	app/controllers/groups_controller.rb	/^  def update$/;"	f	class:GroupsController
 update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
 user_from_remember_token	app/helpers/sessions_helper.rb	/^  def user_from_remember_token$/;"	f	class:SessionsHelper
+user_is_admin?	app/models/group.rb	/^  def user_is_admin?(user)$/;"	f	class:Group
 week	app/controllers/pages_controller.rb	/^  def week$/;"	f	class:PagesController
