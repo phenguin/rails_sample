@@ -1,7 +1,13 @@
 <table class="discussion" summary="User Discussion">
+  <tr hidden=true id="flash_notice">
+    <td></td>
+    <td></td>
+  </tr>
   <%= render @posts %>
 </table>
-<%= form_for current_user.posts.build(:week_id => @week.id), :remote => true do |f| %>
+<% logger.debug @user %>
+<% @user ||= current_user %>
+<%= form_for @user.posts.build(:week_id => @week.id), :remote => true do |f| %>
   <div class="field">
     <%= f.text_area :content %>
   </div>

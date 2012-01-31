@@ -411,3 +411,17 @@ table.discussion tr td.post span.timestamp {
   font-size: 85%;
   color: #666;
 }
+
+div#right  {
+  padding : 20px;
+  position : relative;
+}
+
+div#right textarea#post_content {
+  height : 60px;
+}
+
+/*div#right div.flash.success  {*/
+  /*width : 300px;*/
+/*}*/
+

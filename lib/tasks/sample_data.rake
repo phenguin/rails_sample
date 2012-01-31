@@ -90,8 +90,9 @@ def make_groups
 end
 
 def make_weeks
-  group = Group.first
   [1,2,3,4].each do |n|
-    Week.create!(:group_id => group.id, :week_number => n)
+    Group.all.each do |group|
+      Week.create!(:group_id => group.id, :week_number => n)
+    end
   end
 end
