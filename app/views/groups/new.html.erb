@@ -8,12 +8,6 @@
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= label :topics, "What topics are relevant to your group?" %><br />
-    <% @topics = Topic.find(:all, :order => "name") %>
-    <%= collection_select(:topics, :id, @topics, :id, :name, options ={:prompt => "-Select a payment"}, :multiple =>true, :size => 5) %>
-  </div>
-
   <div class="actions">
     <%= f.submit "Make group!" %>
   </div>
