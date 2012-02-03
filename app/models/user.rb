@@ -77,6 +77,10 @@ class User < ActiveRecord::Base
     affiliations.find_by_group_id(group.id).destroy
   end
 
+  def feed
+    Article.with_topic_in(Topic.all)
+  end
+
   def has_password?(submitted)
     #Compare encrypted versions of submitted and
     #stored passwords
