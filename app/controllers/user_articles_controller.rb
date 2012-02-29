@@ -1,13 +1,15 @@
 class UserArticlesController < ApplicationController
   before_filter :authenticate
 
-  def bookmark
+  def create
     title = params[:title]
     link = params[:link]
     attr = { :title => title, :link => link }
     if title && link
       current_user.bookmark!(Article.create!(attr))
       flash[:success] = "Bookmarked!"
+    else
+      flash[:error] = "Invalid bookmark page"
     end
     redirect_to root_path
   end

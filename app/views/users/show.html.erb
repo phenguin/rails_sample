@@ -5,6 +5,13 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+
+      <% if current_user.following?(@user) %>
+        <%= render :partial => 'users/unfollow' %>
+      <% else %>
+        <%= render :partial => 'users/follow' %>
+      <% end -%>
+
       <b>Email: </b><%= @user.email %><br />
 
       <div class="topic_list round">

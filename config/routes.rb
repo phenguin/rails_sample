@@ -6,6 +6,7 @@ SampleApp::Application.routes.draw do
   resources :topics, :only => [:create, :show]
   resources :affiliations, :only => [:create,:destroy]
   resources :groups
+  resources :relationships, :only => [:create, :destroy]
   resources :posts, :only => [:create, :destroy]
 
   resources :groups do
@@ -21,7 +22,7 @@ SampleApp::Application.routes.draw do
   end
 
   root :to => 'pages#home'
-  match '/bookmark', :to => 'user_articles#bookmark'
+  match '/bookmark', :to => 'user_articles#create'
   match '/help', :to => 'pages#help'
 
   match '/signup', :to => 'users#new'

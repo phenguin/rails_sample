@@ -12,7 +12,7 @@ describe SessionsController do
 
     it 'should have the right title' do
       get :new
-      response.should have_selector("title", :content => "Sign in")
+      response.should have_selector("title", :content => "Log in")
     end
   end
 
@@ -29,7 +29,7 @@ describe SessionsController do
 
       it "should have the right title" do
         post :create, :session => @attr
-        response.should have_selector("title", :content => "Sign in")
+        response.should have_selector("title", :content => "Log in")
       end
 
       it "should have flash.now message" do

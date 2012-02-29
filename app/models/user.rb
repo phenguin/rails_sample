@@ -6,12 +6,23 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :subscriptions, :dependent => :destroy
+
   has_many :affiliations, :dependent => :destroy
+  has_many :groups, :through => :affiliations
+
   has_many :user_articles, :dependent => :destroy
   has_many :posts, :dependent => :destroy
+
   has_many :subscribed_topics, :through => :subscriptions, :source => :topic
+
   has_many :bookmarks, :through => :user_articles, :source => :article
-  has_many :groups, :through => :affiliations
+
+
+  has_many :relationships, :foreign_key => :follower_id, :dependent => :destroy
+  has_many :reverse_relationships, :foreign_key => :followed_id, 
+    :class_name => "Relationship", :dependent => :destroy
+  has_many :following, :through => :relationships,:source => :followed
+  has_many :followers, :through => :reverse_relationships,:source => :follower
 
   validates :password, :presence => true,
     :confirmation => true,
@@ -44,6 +55,19 @@ class User < ActiveRecord::Base
 
   def subscribed?(topic)
     subscriptions.find_by_topic_id(topic.id)
+  end
+  
+  #methods for dealing with following other users
+  def follow!(followed)
+    relationships.create!(:followed_id => followed.id)
+  end
+
+  def following?(followed)
+    relationships.find_by_followed_id(followed.id)
+  end
+
+  def unfollow!(followed)
+    relationships.find_by_followed_id(followed.id).destroy
   end
 
   #methods for dealing with users/ articles

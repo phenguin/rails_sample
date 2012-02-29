@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    @title = "Sign in"
+    @title = "Log in"
   end
 
   def create
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
                              params[:session][:password])
     if user.nil?
       flash.now[:error] = "Invalid user/password combination"
-      @title = "Sign in"
+      @title = "Log in"
       render 'new'
     else
       sign_in user
