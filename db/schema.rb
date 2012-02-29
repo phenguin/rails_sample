@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131173213) do
+ActiveRecord::Schema.define(:version => 20120131210302) do
 
   create_table "affiliations", :force => true do |t|
     t.integer  "user_id"
@@ -72,6 +73,17 @@ ActiveRecord::Schema.define(:version => 20120131173213) do
 
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
   add_index "posts", ["week_id"], :name => "index_posts_on_week_id"
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["followed_id", "follower_id"], :name => "index_relationships_on_followed_id_and_follower_id", :unique => true
+  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
+  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
